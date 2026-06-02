@@ -1,0 +1,189 @@
+# Translation of Plugins - MailboxValidator Email Validator - Stable (latest release) in Chinese (China)
+# This file is distributed under the same license as the Plugins - MailboxValidator Email Validator - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-27 11:46:50+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: zh_CN\n"
+"Project-Id-Version: Plugins - MailboxValidator Email Validator - Stable (latest release)\n"
+
+#: mailboxvalidator-email-validator.php:636
+msgid "Skip & Deactivate"
+msgstr "跳过与停用"
+
+#: mailboxvalidator-email-validator.php:633
+msgid "Submit & Deactivate"
+msgstr "呈交与停用"
+
+#: mailboxvalidator-email-validator.php:626
+msgid "Other concerns"
+msgstr "其他原因"
+
+#: mailboxvalidator-email-validator.php:621
+msgid "The plugin doesn't meet my requirements"
+msgstr "此插件没有达到我的要求"
+
+#: mailboxvalidator-email-validator.php:616
+msgid "I couldn't get the plugin to work"
+msgstr "我无法使用此插件"
+
+#: mailboxvalidator-email-validator.php:611
+msgid "I no longer need the plugin"
+msgstr "我已经不需要此插件"
+
+#: mailboxvalidator-email-validator.php:607
+msgid "Would you mind sharing with us the reason to deactivate the plugin"
+msgstr "您愿意与我们分享您停用此插件的原因吗"
+
+#: mailboxvalidator-email-validator.php:482
+msgid "Block email domains from registering for your service. Please enter one domain name in each row."
+msgstr "阻止用户使用电邮地址域名注册您的服务。请在每行输入一个您欲拦阻的域名。"
+
+#: mailboxvalidator-email-validator.php:470
+msgid "Block role-based type email, such as admin@, support@, sales@ and so on, from registering for your service."
+msgstr "阻止用户使用基于角色的电邮地址册您的服务，例如admin@, support@, sales@等等。"
+
+#: mailboxvalidator-email-validator.php:459
+msgid "Block free email type from registering for your service."
+msgstr "阻止用户使用免费电邮地址注册您的服务。"
+
+#: mailboxvalidator-email-validator.php:448
+msgid "Block disposable email from registering for your service."
+msgstr "阻止用户使用一次性电邮地址注册您的服务。"
+
+#: mailboxvalidator-email-validator.php:437
+msgid "Block invalid email from using your service. This option will perform a comprehensive validation, including SMTP server check."
+msgstr "阻止用户使用无效电邮地址注册您的服务。此选项将进行一个完整的检测，包括SMTP服务器检查。"
+
+#: mailboxvalidator-email-validator.php:426
+msgid "Log down the API transaction details for debugging purpose. Please disable this option for the live mode."
+msgstr "记录下API使用详情，以便日后除错用途。请勿在线上模式使用此选项。"
+
+#: mailboxvalidator-email-validator.php:425
+#: mailboxvalidator-email-validator.php:436
+#: mailboxvalidator-email-validator.php:447
+#: mailboxvalidator-email-validator.php:458
+#: mailboxvalidator-email-validator.php:469
+msgid "Off"
+msgstr "关闭"
+
+#: mailboxvalidator-email-validator.php:424
+#: mailboxvalidator-email-validator.php:435
+#: mailboxvalidator-email-validator.php:446
+#: mailboxvalidator-email-validator.php:457
+#: mailboxvalidator-email-validator.php:468
+msgid "On"
+msgstr "开启"
+
+#: mailboxvalidator-email-validator.php:415
+msgid "You can sign up for a <a href=\"%s\" target=\"blank\">free MailboxValidator API key</a>."
+msgstr "您可以通过注册来获取一个<a href=\"%s\" target=\"blank\">免费的MailboxValidator API密钥</a>。"
+
+#: mailboxvalidator-email-validator.php:395
+msgid "Please enter a MailboxValidator API key to enable the email blocking."
+msgstr "欲使用电邮地址拦截服务，请输入一个MailboxValidator API密钥。"
+
+#: mailboxvalidator-email-validator.php:295
+msgid "Block Custom Email Domains"
+msgstr "阻止定制电邮地址域名"
+
+#: mailboxvalidator-email-validator.php:293
+msgid "Block Role-Based Email"
+msgstr "阻止基于角色的电邮地址"
+
+#: mailboxvalidator-email-validator.php:291
+msgid "Block Free Email"
+msgstr "阻止免费电邮地址"
+
+#: mailboxvalidator-email-validator.php:289
+msgid "Block Disposable Email"
+msgstr "阻止一次性电邮地址"
+
+#: mailboxvalidator-email-validator.php:287
+msgid "Block Invalid Email"
+msgstr "阻止无效电邮地址"
+
+#: mailboxvalidator-email-validator.php:286
+msgid "Debug Mode"
+msgstr "调试模式"
+
+#: mailboxvalidator-email-validator.php:283
+msgid "MailboxValidator API Key"
+msgstr "MailboxValidator API密钥"
+
+#: mailboxvalidator-email-validator.php:282
+msgid "Main Settings"
+msgstr "主设定"
+
+#: mailboxvalidator-email-validator.php:242
+msgid "Next Renewal Date"
+msgstr "下一更新日期"
+
+#: mailboxvalidator-email-validator.php:241
+msgid "Credits Available"
+msgstr "余额"
+
+#: mailboxvalidator-email-validator.php:240
+msgid "Plan Name"
+msgstr "方案名称"
+
+#: mailboxvalidator-email-validator.php:239
+msgid "Plan Information"
+msgstr "方案资讯"
+
+#: mailboxvalidator-email-validator.php:144
+#: mailboxvalidator-email-validator.php:213
+msgid "The email blocking will be activated immediately once you have enabled the blocking options. No additional coding is required. Please visit <a href=\"%s\">here</a> to learn more about how the blocking works for each supported plugin."
+msgstr "一旦您启用阻挡选项，电邮地址阻拦选项将立即启动。您无需编译任何额外代码。欲知此阻拦选项如何在其他插件运作，您可以浏览<a href=\"%s\">这里</a>。"
+
+#: mailboxvalidator-email-validator.php:142
+#: mailboxvalidator-email-validator.php:212
+msgid "This plugin enables you to block invalid, disposable, free or role-based email, from registering for your service. This plugin has been tested successfully to support WooCommerce, JetPack, Contact Form 7, Formidable forms and many more."
+msgstr "此插件让您可以阻止用户使用无效、一次性、免费或基于角色的电邮地址来注册您的服务。此插件已经过充分的测试，并支持WooCommerce、JetPack、Contact Form 7、Formidable forms以及更多插件。"
+
+#: mailboxvalidator-email-validator.php:579
+msgid "Please select your feedback."
+msgstr "请选择您的反馈。"
+
+#: mailboxvalidator-email-validator.php:578
+msgid "Quick Feedback"
+msgstr "快速反馈"
+
+#: mailboxvalidator-email-validator.php:549
+msgid "Please sign up for a <a href=\"%1$s\">free MailboxValidator API key</a> to enable the email blocking."
+msgstr "请注册一个<a href=\"%1$s\">免费的MailboxValidator API密钥</a>来使用电邮地址阻拦功能。"
+
+#. Description of the plugin
+#: mailboxvalidator-email-validator.php
+msgid "This plugin enables you to block invalid, disposable, free or role-based email from registering for your service. This plugin has been tested successfully to support WooCommerce, JetPack, Contact Form 7, Formidable forms and many more."
+msgstr "此插件让您可以阻止用户使用无效、一次性、免费或基于角色的电邮地址来注册您的服务。此插件已经过充分的测试，并支持WooCommerce、JetPack、Contact Form 7、Formidable forms以及更多插件。"
+
+#: mailboxvalidator-email-validator.php:596
+msgid "Love our plugin? Please leave us a %2$s rating. A huge thanks in advance!"
+msgstr "喜欢我们的插件吗？请为我们留下%2$s评分。先在此多谢您！"
+
+#: mailboxvalidator-email-validator.php:253
+msgid "Save Changes"
+msgstr "储存更改"
+
+#. Author URI of the plugin
+#: mailboxvalidator-email-validator.php
+msgid "https://mailboxvalidator.com"
+msgstr "https://mailboxvalidator.com"
+
+#. Author of the plugin
+#: mailboxvalidator-email-validator.php
+msgid "MailboxValidator"
+msgstr "MailboxValidator"
+
+#. Plugin Name of the plugin
+#: mailboxvalidator-email-validator.php
+#: mailboxvalidator-email-validator.php:140
+#: mailboxvalidator-email-validator.php:211
+#: mailboxvalidator-email-validator.php:597
+msgid "MailboxValidator Email Validator"
+msgstr "MailboxValidator Email Validator"
