@@ -29,6 +29,7 @@ services:
     image: wordpress:latest
     container_name: wordpress-app
     restart: unless-stopped
+    entrypoint: ["/usr/local/bin/init-wordpress.sh"]
     depends_on:
       db:
         condition: service_healthy
@@ -45,6 +46,7 @@ services:
     volumes:
       - wordpress_data:/var/www/html
       - ./php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
+      - ./wordpress/init-wordpress.sh:/usr/local/bin/init-wordpress.sh:ro
 
 volumes:
   db_data:
