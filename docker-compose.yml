@@ -44,6 +44,7 @@ services:
         define('WP_REDIS_PORT', 6379);
     volumes:
       - wordpress_data:/var/www/html
+      - ./php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
 
 volumes:
   db_data:
