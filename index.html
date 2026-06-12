@@ -1409,11 +1409,13 @@
       gsap.utils.toArray("#apple-footer-sections a:not(.footer-contact-button)").forEach(function (link) {
         function playFooterLinkHover() {
           gsap.to(link, {
-            x: 5,
+            x: 4,
             y: -1,
+            scale: 1.06,
             color: "#1d1d1f",
-            duration: 0.24,
-            ease: "power2.out",
+            transformOrigin: "0% 50%",
+            duration: 0.26,
+            ease: "back.out(1.8)",
             overwrite: "auto"
           });
         }
@@ -1422,6 +1424,7 @@
           gsap.to(link, {
             x: 0,
             y: 0,
+            scale: 1,
             color: "#6e6e73",
             duration: 0.22,
             ease: "power2.out",
@@ -1433,16 +1436,6 @@
         link.addEventListener("mouseleave", resetFooterLinkHover);
         link.addEventListener("focus", playFooterLinkHover);
         link.addEventListener("blur", resetFooterLinkHover);
-      });
-
-      gsap.utils.toArray("#apple-footer-sections summary span:first-child, #apple-footer-sections > div > div:first-child").forEach(function (heading) {
-        heading.addEventListener("mouseenter", function () {
-          gsap.to(heading, { x: 3, color: "#0071e3", duration: 0.24, ease: "power2.out", overwrite: "auto" });
-        });
-
-        heading.addEventListener("mouseleave", function () {
-          gsap.to(heading, { x: 0, color: "#1d1d1f", duration: 0.22, ease: "power2.out", overwrite: "auto" });
-        });
       });
 
       var brand = document.querySelector(".brand");
