@@ -1,0 +1,1385 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BASE CLUB Landing</title>
+  <style>
+    :root {
+      --ink: #ffffff;
+      --blue: #142893;
+      --blue-deep: #102079;
+      --acid: #c8fb4c;
+      --line: rgba(255, 255, 255, 0.1);
+      --stroke: rgba(255, 255, 255, 0.78);
+      --shadow: rgba(0, 0, 0, 0.28);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background: #ffffff;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page-shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(26px, 4vw, 54px);
+      padding: clamp(18px, 4vw, 62px);
+    }
+
+    .hero-card {
+      position: relative;
+      width: min(100%, 1320px);
+      min-height: min(76vw, 760px);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-radius: clamp(34px, 4vw, 58px);
+      background:
+        radial-gradient(circle at 12% 10%, rgba(255, 255, 255, 0.94), transparent 28%),
+        radial-gradient(circle at 86% 78%, rgba(255, 255, 255, 0.68), transparent 30%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.38));
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.78), inset 0 -1px 0 rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(22px) saturate(1.16);
+      -webkit-backdrop-filter: blur(22px) saturate(1.16);
+      color: #10131d;
+      isolation: isolate;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.56), transparent 34%);
+      opacity: 0.88;
+      pointer-events: none;
+    }
+
+    .topbar {
+      position: relative;
+      z-index: 4;
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      grid-template-areas: "brand nav wallet";
+      align-items: center;
+      column-gap: 18px;
+      padding: clamp(24px, 3.8vw, 48px) clamp(28px, 5.4vw, 72px) 8px;
+    }
+
+    .brand {
+      grid-area: brand;
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.16));
+      font-weight: 950;
+      letter-spacing: 0;
+      justify-self: start;
+      cursor: pointer;
+      transform-origin: center;
+    }
+
+    .bubble {
+      display: grid;
+      place-items: center;
+      min-height: 0;
+      padding: 0;
+      border: 0;
+      color: #15151d;
+      background: transparent;
+      font-size: clamp(17px, 1.5vw, 22px);
+      line-height: 1;
+    }
+
+    .bubble:first-child {
+      border-radius: 0;
+    }
+
+    .bubble img {
+      display: block;
+      width: clamp(58px, 5.2vw, 76px);
+      height: auto;
+      object-fit: contain;
+    }
+
+    .nav {
+      grid-area: nav;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(10px, 1.4vw, 18px);
+      min-width: 0;
+      justify-self: center;
+      width: min(100%, 620px);
+    }
+
+    .nav-item {
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+    }
+
+    .product-nav::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      width: 240px;
+      height: 18px;
+      translate: -50% 0;
+    }
+
+    .nav-pill,
+    .wallet {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(255, 255, 255, 0.72);
+      border-radius: 999px;
+      background: rgba(200, 251, 76, 0.92);
+      color: #102044;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.58), 0 10px 22px rgba(118, 164, 18, 0.16);
+      font-size: clamp(12px, 1vw, 15px);
+      font-weight: 800;
+      white-space: nowrap;
+      cursor: pointer;
+      transform-origin: center;
+      will-change: transform, box-shadow, background-color;
+    }
+
+    .nav-pill {
+      min-width: clamp(92px, 8.6vw, 138px);
+      padding: 0 clamp(14px, 1.6vw, 22px);
+    }
+
+    .product-menu {
+      position: absolute;
+      left: 50%;
+      top: calc(100% + 12px);
+      z-index: 20;
+      width: max-content;
+      min-width: 210px;
+      display: grid;
+      gap: 10px;
+      padding: 14px;
+      border: 2px solid rgba(255, 255, 255, 0.58);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.62);
+      box-shadow: 0 20px 42px rgba(16, 21, 36, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.62);
+      backdrop-filter: blur(14px);
+      translate: -50% 0;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .submenu-pill {
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      border: 2px solid rgba(255, 255, 255, 0.68);
+      border-radius: 999px;
+      background: rgba(200, 251, 76, 0.9);
+      color: #102044;
+      font-size: 14px;
+      font-weight: 850;
+      white-space: nowrap;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.54), 0 8px 18px rgba(118, 164, 18, 0.14);
+      transform-origin: center;
+      will-change: transform, box-shadow, background-color;
+    }
+
+    .wallet {
+      grid-area: wallet;
+      gap: 14px;
+      justify-self: end;
+      min-width: clamp(190px, 20vw, 278px);
+      padding: 0 clamp(20px, 2.6vw, 34px);
+    }
+
+    .wallet span {
+      color: #102044;
+      font-size: 28px;
+      line-height: 1;
+      transform: translateY(-1px);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: minmax(0, 0.98fr) minmax(360px, 0.82fr);
+      gap: clamp(18px, 4vw, 64px);
+      padding: clamp(22px, 4vw, 44px) clamp(24px, 6vw, 74px) clamp(30px, 5vw, 60px);
+    }
+
+    .copy {
+      position: relative;
+      min-width: 0;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 620px;
+      font-size: clamp(48px, 6.6vw, 108px);
+      line-height: 0.95;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      text-wrap: balance;
+      color: #11172b;
+      text-shadow: 0 9px 0 rgba(20, 35, 105, 0.1);
+    }
+
+    h1 .club-line {
+      display: block;
+      white-space: nowrap;
+    }
+
+    h1 .hash {
+      color: var(--acid);
+      display: inline-block;
+      transform: rotate(-3deg) translateY(-3px);
+      text-shadow: 0 7px 0 rgba(20, 35, 105, 0.16);
+    }
+
+    .subcopy {
+      width: min(430px, 100%);
+      margin: clamp(24px, 4vw, 46px) 0 0 clamp(28px, 8vw, 138px);
+      font-size: clamp(15px, 1.6vw, 20px);
+      line-height: 1.45;
+      font-weight: 850;
+      color: rgba(16, 19, 29, 0.78);
+      text-shadow: none;
+    }
+
+    .subcopy span {
+      display: block;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: clamp(22px, 4vw, 40px) 0 0 clamp(28px, 8vw, 138px);
+      flex-wrap: wrap;
+    }
+
+    .button {
+      position: relative;
+      --shine-x: -55%;
+      overflow: hidden;
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 0 26px;
+      border: 2px solid rgba(255, 255, 255, 0.58);
+      font-weight: 950;
+      font-size: 14px;
+      white-space: nowrap;
+      box-shadow: 0 12px 22px rgba(0, 0, 0, 0.16);
+      cursor: pointer;
+      transform-origin: center;
+      will-change: transform, box-shadow, background-color;
+    }
+
+    .button::after {
+      content: "";
+      position: absolute;
+      inset: -40% auto -40% var(--shine-x);
+      width: 42%;
+      transform: skewX(-18deg);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.72), transparent);
+      opacity: 0.68;
+      pointer-events: none;
+    }
+
+    .button.primary {
+      color: #19306e;
+      background: var(--acid);
+    }
+
+    .button.secondary {
+      color: #11172b;
+      background: rgba(255, 255, 255, 0.32);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .visual {
+      position: relative;
+      min-height: 560px;
+    }
+
+    .profile-card {
+      position: absolute;
+      width: min(28vw, 300px);
+      min-width: 210px;
+      aspect-ratio: 0.78;
+      padding: 28px 20px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 32px;
+      background:
+        radial-gradient(circle at 22% 10%, rgba(255, 255, 255, 0.82), transparent 28%),
+        linear-gradient(150deg, rgba(255, 235, 232, 0.94), rgba(238, 83, 73, 0.72) 56%, rgba(165, 22, 30, 0.98));
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      box-shadow: 0 28px 52px rgba(92, 8, 16, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.36);
+      backdrop-filter: blur(10px);
+      will-change: transform;
+    }
+
+    .profile-card.one {
+      top: 24px;
+      left: 8%;
+      transform: rotate(8deg);
+    }
+
+    .profile-card.two {
+      right: 10%;
+      bottom: 28px;
+      transform: rotate(-11deg);
+    }
+
+    .avatar {
+      width: clamp(82px, 8vw, 118px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+      border: 7px solid rgba(255, 255, 255, 0.86);
+      background: #f1f5ff;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.26);
+      overflow: hidden;
+    }
+
+    .avatar svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .handle {
+      font-size: clamp(24px, 2.5vw, 34px);
+      font-weight: 950;
+      line-height: 1;
+      text-shadow: 0 5px 0 rgba(0, 0, 0, 0.18);
+    }
+
+    .points {
+      margin-top: 8px;
+      font-size: clamp(13px, 1.2vw, 17px);
+      font-weight: 850;
+      color: rgba(255, 255, 255, 0.82);
+      transform: rotate(-3deg);
+    }
+
+    .scribble {
+      position: absolute;
+      pointer-events: none;
+      z-index: 4;
+      color: var(--acid);
+      filter: drop-shadow(0 7px 0 rgba(0, 0, 0, 0.15));
+      will-change: transform;
+    }
+
+    .arrow-large {
+      top: 120px;
+      right: 8%;
+      width: clamp(126px, 14vw, 210px);
+      transform: rotate(-7deg);
+    }
+
+    .arrow-small {
+      left: -30px;
+      bottom: 42px;
+      width: clamp(86px, 8.5vw, 122px);
+      transform: rotate(-12deg);
+    }
+
+    .stamp {
+      position: absolute;
+      right: 7%;
+      bottom: 36px;
+      z-index: 3;
+      width: clamp(104px, 12vw, 164px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background: rgba(200, 251, 76, 0.96);
+      border: 3px solid rgba(255, 255, 255, 0.55);
+      box-shadow: 0 17px 30px rgba(0, 0, 0, 0.2);
+      transform: rotate(-17deg);
+      will-change: transform;
+    }
+
+    .stamp img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .stickers {
+      position: absolute;
+      top: 34px;
+      right: 11%;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      transform: rotate(14deg);
+      will-change: transform;
+    }
+
+    .sticker {
+      display: grid;
+      place-items: center;
+      width: clamp(38px, 4.5vw, 66px);
+      aspect-ratio: 1;
+      border-radius: 17px;
+      color: #153081;
+      background: #f7f7ff;
+      border: 3px solid #fff;
+      box-shadow: 0 8px 0 rgba(0, 0, 0, 0.16);
+      font-weight: 950;
+      font-size: clamp(18px, 2vw, 30px);
+    }
+
+    .sticker:nth-child(2) {
+      color: #fff;
+      background: #ff8a3d;
+      transform: rotate(-12deg) translateY(8px);
+    }
+
+    .sticker:nth-child(3) {
+      color: #fff;
+      background: #47a4ff;
+      transform: rotate(10deg) translateY(16px);
+    }
+
+    .sticker:nth-child(4) {
+      color: #17317e;
+      background: var(--acid);
+      transform: rotate(-8deg) translateY(2px);
+    }
+
+    .cursor-dot {
+      position: fixed;
+      z-index: 80;
+      width: 26px;
+      aspect-ratio: 1;
+      left: 0;
+      top: 0;
+      border: 2px solid rgba(255, 255, 255, 0.24);
+      border-radius: 50%;
+      box-shadow: 0 0 0 18px rgba(255, 255, 255, 0.06);
+      pointer-events: none;
+      opacity: 0;
+      margin: -13px 0 0 -13px;
+      will-change: transform, opacity;
+    }
+
+    .glow {
+      position: absolute;
+      inset: auto 8% -20% auto;
+      width: 40%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200, 251, 76, 0.22), transparent 62%);
+      filter: blur(18px);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hardware-card {
+      width: min(100%, 1320px);
+      position: relative;
+      overflow: hidden;
+      border-radius: clamp(26px, 3vw, 42px);
+      background:
+        radial-gradient(circle at 10% 8%, rgba(255, 255, 255, 0.92), transparent 26%),
+        radial-gradient(circle at 92% 90%, rgba(255, 255, 255, 0.72), transparent 28%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.42));
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      box-shadow: 0 24px 72px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.78), inset 0 -1px 0 rgba(255, 255, 255, 0.26);
+      backdrop-filter: blur(22px) saturate(1.16);
+      -webkit-backdrop-filter: blur(22px) saturate(1.16);
+      color: #15171d;
+      isolation: isolate;
+    }
+
+    .hardware-card::before,
+    .hardware-card::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hardware-card::before {
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.58), transparent 34%);
+      opacity: 0.88;
+    }
+
+    .hardware-card::after {
+      right: -12%;
+      bottom: -38%;
+      width: 58%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.62), transparent 62%);
+      filter: blur(10px);
+      opacity: 0.72;
+    }
+
+    .hardware-inner {
+      --hardware-space: clamp(22px, 3.2vw, 42px);
+      position: relative;
+      z-index: 1;
+      min-height: clamp(440px, 36vw, 500px);
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      grid-template-rows: minmax(300px, 1fr) auto;
+      grid-template-areas:
+        "left copy"
+        "left action";
+      gap: var(--hardware-space);
+      padding: var(--hardware-space);
+    }
+
+    .hardware-panel {
+      position: relative;
+      min-width: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 26px;
+      background: rgba(255, 255, 255, 0.62);
+      box-shadow: inset 0 0 0 1px rgba(18, 20, 28, 0.06);
+      overflow: hidden;
+    }
+
+    .hardware-panel::after {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px dashed rgba(18, 20, 28, 0.08);
+      border-radius: 20px;
+      pointer-events: none;
+    }
+
+    .hardware-panel-left {
+      grid-area: left;
+      background: transparent;
+      box-shadow: none;
+      overflow: visible;
+      height: 100%;
+      position: relative;
+    }
+
+    .hardware-panel-left::after {
+      display: none;
+    }
+
+    .hardware-svg {
+      width: min(96%, 560px);
+      height: auto;
+      overflow: visible;
+      filter: drop-shadow(0 22px 26px rgba(16, 21, 36, 0.08));
+    }
+
+    .hardware-image {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: auto;
+      max-width: 108%;
+      max-height: 100%;
+      display: block;
+      border-radius: 12px;
+      object-fit: contain;
+      filter: drop-shadow(0 22px 26px rgba(16, 21, 36, 0.08));
+      transform-origin: center;
+      translate: -50% -50%;
+      will-change: transform, opacity;
+    }
+
+    .hardware-image-left {
+      top: 50%;
+      max-width: 88%;
+      max-height: 72%;
+    }
+
+    .hardware-copy {
+      grid-area: copy;
+      align-self: start;
+      max-width: min(100%, 860px);
+      padding: clamp(34px, 5vw, 72px) 0 0;
+      color: #11131a;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    }
+
+    .hardware-title {
+      margin: 0;
+      font-size: clamp(28px, 3vw, 46px);
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      color: #101219;
+      white-space: nowrap;
+    }
+
+    .hardware-description {
+      width: min(100%, 650px);
+      margin: clamp(12px, 1.6vw, 18px) 0 0;
+      color: rgba(17, 19, 26, 0.68);
+      font-size: clamp(15px, 1.3vw, 18px);
+      line-height: 1.65;
+      font-weight: 700;
+    }
+
+    .hardware-action {
+      grid-area: action;
+      align-self: end;
+      justify-self: end;
+      position: relative;
+      margin-right: clamp(22px, 4vw, 64px);
+      min-width: clamp(150px, 13vw, 190px);
+      min-height: 54px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      background: rgb(246, 63, 105);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 950;
+      box-shadow: 0 18px 34px rgba(246, 63, 105, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.48);
+      transform-origin: center;
+      will-change: transform, box-shadow;
+    }
+
+    .hardware-action:focus-visible {
+      outline: 3px solid rgba(246, 63, 105, 0.28);
+      outline-offset: 4px;
+    }
+
+    .hardware-action::before {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      border-radius: inherit;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.08) 42%, rgba(255, 255, 255, 0.22));
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      pointer-events: none;
+    }
+
+    .hardware-action span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hardware-line {
+      stroke: #b8bcc4;
+      stroke-width: 1.8;
+      stroke-linejoin: round;
+    }
+
+    .hardware-soft {
+      fill: #f7f7f5;
+    }
+
+    .hardware-pink {
+      fill: #f34f82;
+    }
+
+    .hardware-pink-line {
+      stroke: #f34f82;
+      stroke-width: 3;
+      stroke-linecap: round;
+    }
+
+    .hardware-label {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 0;
+      fill: #161820;
+    }
+
+    .hardware-muted {
+      font-size: 10px;
+      font-weight: 800;
+      fill: #535862;
+    }
+
+    .gpu-layer,
+    .server-node,
+    .cloud-node,
+    .laptop-node,
+    .gpu-stack-card,
+    .signal-line,
+    .fan,
+    .chip,
+    .spark {
+      transform-box: fill-box;
+      transform-origin: center;
+      will-change: transform, opacity;
+    }
+
+    @media (max-width: 1040px) {
+      .hero-card {
+        min-height: auto;
+      }
+
+      .hardware-card {
+        aspect-ratio: auto;
+      }
+
+      .hardware-inner {
+        min-height: 620px;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(0, 1fr) auto auto;
+        grid-template-areas:
+          "left"
+          "copy"
+          "action";
+      }
+
+      .hardware-copy {
+        padding-top: 0;
+      }
+
+      .nav {
+        width: 100%;
+        max-width: 560px;
+        overflow-x: auto;
+        justify-self: center;
+        justify-content: center;
+        padding-bottom: 6px;
+        scrollbar-width: none;
+      }
+
+      .nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+      }
+
+      .visual {
+        min-height: 460px;
+      }
+
+      .profile-card.one {
+        left: 28%;
+      }
+
+      .profile-card.two {
+        right: 22%;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page-shell {
+        padding: 14px;
+      }
+
+      .hero-card {
+        border-width: 1.5px;
+        border-radius: 32px;
+      }
+
+      .hardware-card {
+        border-radius: 28px;
+      }
+
+      .hardware-inner {
+        min-height: 700px;
+        padding: 18px;
+        gap: 16px;
+      }
+
+      .hardware-title {
+        font-size: clamp(24px, 8vw, 34px);
+      }
+
+      .hardware-panel {
+        border-radius: 20px;
+      }
+
+      .hardware-action {
+        justify-self: stretch;
+        width: 100%;
+        margin-right: 0;
+      }
+
+      .topbar {
+        grid-template-columns: minmax(0, auto) minmax(120px, 1fr);
+        grid-template-areas:
+          "brand wallet"
+          "nav nav";
+        row-gap: 16px;
+        padding: 22px 18px 6px;
+      }
+
+      .bubble {
+        min-height: 0;
+        padding-inline: 0;
+        font-size: 15px;
+      }
+
+      .bubble img {
+        width: 54px;
+        height: auto;
+      }
+
+      .nav {
+        justify-content: flex-start;
+        max-width: 100%;
+        gap: 10px;
+      }
+
+      .nav-pill {
+        min-width: auto;
+        min-height: 38px;
+        padding: 0 16px;
+        font-size: 12px;
+      }
+
+      .product-menu {
+        left: 0;
+        min-width: 190px;
+        translate: 0 0;
+      }
+
+      .submenu-pill {
+        min-height: 36px;
+        font-size: 12px;
+      }
+
+      .wallet {
+        min-height: 38px;
+        min-width: 0;
+        gap: 8px;
+        padding: 0 13px;
+        font-size: 12px;
+      }
+
+      .wallet span {
+        font-size: 22px;
+      }
+
+      .hero-content {
+        padding: 20px;
+        gap: 6px;
+      }
+
+      h1 {
+        font-size: clamp(46px, 15vw, 72px);
+      }
+
+      h1 .club-line {
+        white-space: normal;
+      }
+
+      .subcopy,
+      .actions {
+        margin-left: 0;
+      }
+
+      .visual {
+        min-height: 390px;
+        margin-top: 8px;
+      }
+
+      .profile-card {
+        min-width: 174px;
+        border-radius: 25px;
+      }
+
+      .profile-card.one {
+        top: 10px;
+        left: 9%;
+      }
+
+      .profile-card.two {
+        right: 5%;
+        bottom: 22px;
+      }
+
+      .stickers {
+        top: 4px;
+        right: 2%;
+      }
+
+      .stamp {
+        right: 1%;
+        bottom: 10px;
+      }
+
+      .arrow-large {
+        top: 88px;
+        right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero-card" aria-label="BASE CLUB hero">
+      <div class="topbar">
+        <a class="brand" href="#" aria-label="基地俱乐部">
+          <span class="bubble">
+            <img src="素材/未命名 份 份 份 份 份 份 份.png" alt="">
+          </span>
+        </a>
+        <nav class="nav" aria-label="主导航">
+          <div class="nav-item product-nav">
+            <a class="nav-pill" href="#products">产品</a>
+            <div class="product-menu" aria-label="产品二级导航">
+              <a class="submenu-pill" href="#token-api">Token API</a>
+              <a class="submenu-pill" href="#telegram-bot">TelegramBot</a>
+              <a class="submenu-pill" href="#ets">ETS插件扩展平台</a>
+              <a class="submenu-pill" href="#vps">服务器/VPS</a>
+            </div>
+          </div>
+          <a class="nav-pill" href="#rewards">奖励</a>
+          <a class="nav-pill" href="#roadmap">路线图</a>
+          <a class="nav-pill" href="#faq">常见问题</a>
+        </nav>
+        <a class="wallet" href="#connect">登录/注册 <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="hero-content">
+        <div class="copy">
+          <h1>
+            <span class="club-line"><span class="hash">#</span>Please start</span>
+            <span>your path</span>
+            <span>of creation.</span>
+          </h1>
+          <p class="subcopy">
+            <span>我们是面向全栈开发的技术服务平台。</span>
+            <span>提供页面开发、博客官网定制、主题插件定制、机器人开发定制，以及服务器与 CDN 网络服务。</span>
+          </p>
+          <div class="actions">
+            <a class="button primary" href="#join">加入俱乐部</a>
+            <a class="button secondary" href="#learn">了解更多</a>
+          </div>
+
+          <svg class="scribble arrow-small" viewBox="0 0 170 220" fill="none" aria-hidden="true">
+            <path d="M66 18C65 55 63 86 81 104C103 126 139 109 139 78C139 47 99 44 74 78C45 119 54 165 102 178C128 185 145 181 158 171" stroke="currentColor" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" opacity="0.18"/>
+            <path d="M66 18C65 55 63 86 81 104C103 126 139 109 139 78C139 47 99 44 74 78C45 119 54 165 102 178C128 185 145 181 158 171" stroke="currentColor" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M158 171C141 168 126 165 112 158M158 171C143 181 131 191 119 204" stroke="currentColor" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="visual" aria-hidden="true">
+          <div class="stickers">
+            <span class="sticker">✹</span>
+            <span class="sticker">▶</span>
+            <span class="sticker">B</span>
+            <span class="sticker">!</span>
+          </div>
+
+          <article class="profile-card one">
+            <div class="avatar">
+              <svg viewBox="0 0 120 120" role="img" aria-label="">
+                <rect width="120" height="120" fill="#cfd8ff"/>
+                <rect x="25" y="38" width="66" height="54" rx="10" fill="#b58f6a"/>
+                <rect x="31" y="26" width="55" height="22" rx="4" fill="#101012"/>
+                <rect x="18" y="47" width="16" height="25" fill="#101012"/>
+                <rect x="82" y="42" width="15" height="33" fill="#101012"/>
+                <rect x="33" y="52" width="52" height="19" rx="4" fill="#eff4ff"/>
+                <rect x="40" y="57" width="13" height="9" fill="#2d89ff"/>
+                <rect x="65" y="57" width="13" height="9" fill="#ff5549"/>
+                <rect x="50" y="80" width="32" height="6" rx="3" fill="#171717"/>
+              </svg>
+            </div>
+            <strong class="handle">pearl.eth</strong>
+            <span class="points">293,362 points</span>
+          </article>
+
+          <article class="profile-card two">
+            <div class="avatar">
+              <svg viewBox="0 0 120 120" role="img" aria-label="">
+                <rect width="120" height="120" fill="#d6d1ad"/>
+                <circle cx="59" cy="63" r="35" fill="#b9a16d"/>
+                <path d="M30 75c13-30 26-44 57-43 0 0-5 23 8 42-18 17-43 18-65 1Z" fill="#ece0bf"/>
+                <circle cx="46" cy="61" r="6" fill="#25231d"/>
+                <circle cx="75" cy="61" r="6" fill="#25231d"/>
+                <path d="M48 80c14 8 24 8 35-2" stroke="#25231d" stroke-width="5" stroke-linecap="round"/>
+                <path d="M35 42c11-16 30-20 50-13" stroke="#8e6f42" stroke-width="8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <strong class="handle">baseclub.eth</strong>
+            <span class="points">29,422 points</span>
+          </article>
+
+          <svg class="scribble arrow-large" viewBox="0 0 190 198" fill="none" aria-hidden="true">
+            <path d="M34 92c18-52 72-86 114-63 36 20 30 75-9 112-20 19-45 31-69 38" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
+            <path d="M72 179c14-20 24-39 28-61M72 179c25-2 48-9 67-22" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
+          <div class="stamp">
+            <img src="素材/未命名 份 份 份 份 份 份 份.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="glow"></div>
+    </section>
+
+    <section class="hardware-card" aria-label="硬件结构解剖图">
+      <div class="hardware-inner">
+        <article class="hardware-panel hardware-panel-left">
+          <img class="hardware-svg hardware-image hardware-image-left" src="素材/gpu-exploded-cutout-refined.png" alt="显卡结构解剖图">
+        </article>
+
+        <div class="hardware-copy">
+          <h2 class="hardware-title">计算 + 服务器 + CDN + 托管</h2>
+          <p class="hardware-description">一站式高性能基础设施方案，覆盖弹性计算、服务器部署、CDN 加速与托管运维，让业务访问更快、交付更稳、扩展更轻松。</p>
+        </div>
+
+        <a class="hardware-action" href="#products"><span>立即前往</span></a>
+      </div>
+    </section>
+    <div class="cursor-dot" aria-hidden="true"></div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script>
+    (function () {
+      if (!window.gsap) return;
+
+      var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      gsap.defaults({ ease: "power3.out" });
+      if (window.ScrollTrigger) {
+        gsap.registerPlugin(ScrollTrigger);
+      }
+
+      if (prefersReduced) {
+        gsap.set([".hero-card", ".topbar", "h1 span", ".subcopy", ".actions", ".profile-card", ".stickers", ".scribble", ".stamp"], { clearProps: "all" });
+      } else {
+        var intro = gsap.timeline({ defaults: { duration: 0.8 } });
+        intro
+          .from(".hero-card", { autoAlpha: 0, y: 34, scale: 0.96, duration: 1 })
+          .from(".brand, .nav-pill, .wallet", { autoAlpha: 0, y: -18, stagger: 0.045, duration: 0.55 }, "-=0.55")
+          .from("h1 span", { autoAlpha: 0, y: 52, rotation: -2, stagger: 0.08, duration: 0.72 }, "-=0.2")
+          .from(".subcopy, .actions", { autoAlpha: 0, y: 26, stagger: 0.12, duration: 0.65 }, "-=0.35")
+          .from(".profile-card", { autoAlpha: 0, y: 70, rotation: 0, scale: 0.82, stagger: 0.14, duration: 0.9, ease: "back.out(1.45)" }, "-=0.85")
+          .from(".stickers .sticker", { autoAlpha: 0, y: -28, rotation: -20, stagger: 0.06, duration: 0.5, ease: "back.out(1.8)" }, "-=0.45")
+          .from(".scribble", { autoAlpha: 0, scale: 0.7, rotation: "+=14", stagger: 0.12, duration: 0.72 }, "-=0.35")
+          .from(".stamp", { autoAlpha: 0, scale: 0.55, rotation: -50, duration: 0.7, ease: "back.out(1.8)" }, "-=0.45");
+
+        gsap.to(".profile-card.one", { y: -16, rotation: 10, duration: 3.4, repeat: -1, yoyo: true, ease: "sine.inOut" });
+        gsap.to(".profile-card.two", { y: 18, rotation: -9, duration: 3.9, repeat: -1, yoyo: true, ease: "sine.inOut" });
+        gsap.to(".stickers", { y: -10, rotation: 11, duration: 2.6, repeat: -1, yoyo: true, ease: "sine.inOut" });
+        gsap.to(".stamp", { rotation: -7, duration: 4.2, repeat: -1, yoyo: true, ease: "sine.inOut" });
+        var hardwareFloatStarted = false;
+        function startHardwareFloat() {
+          if (hardwareFloatStarted) return;
+          hardwareFloatStarted = true;
+          gsap.fromTo(".hardware-image-left", { y: -7, rotation: -0.3 }, { y: 7, rotation: 0.3, duration: 3.1, repeat: -1, yoyo: true, ease: "sine.inOut" });
+        }
+
+        var hardwareIntro = gsap.timeline({ paused: true, onComplete: startHardwareFloat });
+        hardwareIntro
+          .from(".hardware-card", { autoAlpha: 0, y: 54, scale: 0.96, duration: 0.82, ease: "power3.out" })
+          .from(".hardware-image-left", { autoAlpha: 0, scale: 0.72, y: 42, rotation: -5, duration: 0.78, ease: "back.out(1.65)" }, "-=0.28")
+          .from(".hardware-copy", { autoAlpha: 0, y: 24, duration: 0.58, ease: "power2.out" }, "-=0.28")
+          .from(".hardware-action", { autoAlpha: 0, y: 18, scale: 0.86, duration: 0.46, ease: "back.out(1.7)" }, "-=0.34");
+
+        if (window.ScrollTrigger) {
+          ScrollTrigger.create({
+            trigger: ".hardware-card",
+            start: "top 72%",
+            once: true,
+            onEnter: function () {
+              hardwareIntro.play(0);
+            }
+          });
+        } else {
+          hardwareIntro.play(0);
+        }
+      }
+
+      var cursor = document.querySelector(".cursor-dot");
+      var xTo = gsap.quickTo(cursor, "x", { duration: 0.26, ease: "power3" });
+      var yTo = gsap.quickTo(cursor, "y", { duration: 0.26, ease: "power3" });
+
+      gsap.utils.toArray(".hero-card, .hardware-card").forEach(function (card) {
+        card.addEventListener("mousemove", function (event) {
+          xTo(event.clientX);
+          yTo(event.clientY);
+        });
+
+        card.addEventListener("mouseenter", function (event) {
+          gsap.set(cursor, { x: event.clientX, y: event.clientY });
+          gsap.to(cursor, { autoAlpha: 1, duration: 0.18, overwrite: true });
+        });
+
+        card.addEventListener("mouseleave", function () {
+          gsap.to(cursor, { autoAlpha: 0, duration: 0.18, overwrite: true });
+        });
+      });
+
+      var topTargets = gsap.utils.toArray(".nav-pill, .wallet");
+      topTargets.forEach(function (item) {
+        item.addEventListener("mouseenter", function () {
+          gsap.to(item, {
+            y: -5,
+            scale: 1.06,
+            backgroundColor: "rgba(214, 255, 98, 0.96)",
+            boxShadow: "inset 0 1px 0 rgba(255, 255, 255, 0.68), 0 16px 30px rgba(118, 164, 18, 0.24)",
+            duration: 0.34,
+            ease: "back.out(1.8)",
+            overwrite: "auto"
+          });
+        });
+
+        item.addEventListener("mouseleave", function () {
+          gsap.to(item, {
+            y: 0,
+            scale: 1,
+            backgroundColor: "rgba(200, 251, 76, 0.92)",
+            boxShadow: "inset 0 1px 0 rgba(255, 255, 255, 0.58), 0 10px 22px rgba(118, 164, 18, 0.16)",
+            duration: 0.28,
+            ease: "power2.out",
+            overwrite: "auto"
+          });
+        });
+      });
+
+      var hardwareAction = document.querySelector(".hardware-action");
+      function playHardwareActionHover() {
+        gsap.to(hardwareAction, {
+          y: -5,
+          scale: 1.06,
+          boxShadow: "0 24px 44px rgba(246, 63, 105, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.6)",
+          duration: 0.34,
+          ease: "back.out(1.8)",
+          overwrite: "auto"
+        });
+      }
+
+      function resetHardwareActionHover() {
+        gsap.to(hardwareAction, {
+          y: 0,
+          scale: 1,
+          boxShadow: "0 18px 34px rgba(246, 63, 105, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.48)",
+          duration: 0.28,
+          ease: "power2.out",
+          overwrite: "auto"
+        });
+      }
+
+      if (hardwareAction) {
+        hardwareAction.addEventListener("mouseenter", playHardwareActionHover);
+        hardwareAction.addEventListener("mouseleave", resetHardwareActionHover);
+        hardwareAction.addEventListener("focus", playHardwareActionHover);
+        hardwareAction.addEventListener("blur", resetHardwareActionHover);
+      }
+
+      var brand = document.querySelector(".brand");
+      function playBrandHover() {
+        gsap.to(brand, { y: -4, scale: 1.05, rotation: -1.5, duration: 0.36, ease: "back.out(2)", overwrite: "auto" });
+      }
+
+      function resetBrandHover() {
+        gsap.to(brand, { y: 0, scale: 1, rotation: 0, duration: 0.3, ease: "power2.out", overwrite: "auto" });
+      }
+
+      brand.addEventListener("mouseenter", playBrandHover);
+      brand.addEventListener("mouseleave", resetBrandHover);
+      brand.addEventListener("focus", playBrandHover);
+      brand.addEventListener("blur", resetBrandHover);
+
+      var productNav = document.querySelector(".product-nav");
+      var productMenu = document.querySelector(".product-menu");
+      var productCloseTimer = null;
+      function openProductMenu() {
+        if (productCloseTimer) {
+          clearTimeout(productCloseTimer);
+          productCloseTimer = null;
+        }
+        gsap.to(productMenu, {
+          autoAlpha: 1,
+          y: 0,
+          scale: 1,
+          pointerEvents: "auto",
+          duration: 0.28,
+          ease: "back.out(1.6)",
+          overwrite: true
+        });
+        gsap.fromTo(".submenu-pill", { autoAlpha: 0, y: -8, scale: 0.94 }, {
+          autoAlpha: 1,
+          y: 0,
+          scale: 1,
+          stagger: 0.04,
+          duration: 0.24,
+          ease: "power2.out",
+          overwrite: true
+        });
+      }
+
+      function closeProductMenu() {
+        gsap.to(productMenu, {
+          autoAlpha: 0,
+          y: -8,
+          scale: 0.96,
+          pointerEvents: "none",
+          duration: 0.2,
+          ease: "power2.out",
+          overwrite: true
+        });
+      }
+
+      function scheduleProductMenuClose() {
+        if (productCloseTimer) clearTimeout(productCloseTimer);
+        productCloseTimer = setTimeout(closeProductMenu, 180);
+      }
+
+      gsap.set(productMenu, { y: -8, scale: 0.96, transformOrigin: "50% 0%" });
+      productNav.addEventListener("mouseenter", openProductMenu);
+      productNav.addEventListener("mouseleave", scheduleProductMenuClose);
+      productNav.addEventListener("focusin", openProductMenu);
+      productNav.addEventListener("focusout", function (event) {
+        if (!productNav.contains(event.relatedTarget)) scheduleProductMenuClose();
+      });
+      document.addEventListener("pointerdown", function (event) {
+        if (!productNav.contains(event.target)) closeProductMenu();
+      });
+
+      gsap.utils.toArray(".submenu-pill").forEach(function (item) {
+        function playSubmenuHover() {
+          gsap.to(item, {
+            y: -3,
+            scale: 1.04,
+            backgroundColor: "rgba(214, 255, 98, 0.96)",
+            boxShadow: "inset 0 1px 0 rgba(255, 255, 255, 0.68), 0 12px 22px rgba(118, 164, 18, 0.2)",
+            duration: 0.24,
+            ease: "back.out(1.7)",
+            overwrite: "auto"
+          });
+        }
+
+        function resetSubmenuHover() {
+          gsap.to(item, {
+            y: 0,
+            scale: 1,
+            backgroundColor: "rgba(200, 251, 76, 0.9)",
+            boxShadow: "inset 0 1px 0 rgba(255, 255, 255, 0.54), 0 8px 18px rgba(118, 164, 18, 0.14)",
+            duration: 0.22,
+            ease: "power2.out",
+            overwrite: "auto"
+          });
+        }
+
+        item.addEventListener("mouseenter", playSubmenuHover);
+        item.addEventListener("mouseleave", resetSubmenuHover);
+        item.addEventListener("focus", playSubmenuHover);
+        item.addEventListener("blur", resetSubmenuHover);
+      });
+
+      gsap.utils.toArray(".button").forEach(function (button) {
+        function playButtonHover() {
+          var isPrimary = button.classList.contains("primary");
+          gsap.to(button, {
+            y: -6,
+            scale: 1.06,
+            backgroundColor: isPrimary ? "#d7ff62" : "rgba(255, 255, 255, 0.48)",
+            boxShadow: isPrimary
+              ? "0 18px 34px rgba(200, 251, 76, 0.32), 0 8px 22px rgba(0, 0, 0, 0.18)"
+              : "0 18px 34px rgba(16, 21, 36, 0.16), inset 0 0 0 1px rgba(255, 255, 255, 0.42)",
+            duration: 0.34,
+            ease: "back.out(1.8)",
+            overwrite: "auto"
+          });
+          gsap.fromTo(button, { "--shine-x": "-55%" }, { "--shine-x": "150%", duration: 0.55, ease: "power2.out" });
+        }
+
+        function resetButtonHover() {
+          gsap.to(button, {
+            y: 0,
+            scale: 1,
+            backgroundColor: button.classList.contains("primary") ? "#c8fb4c" : "rgba(255, 255, 255, 0.32)",
+            boxShadow: "0 12px 22px rgba(0, 0, 0, 0.16)",
+            duration: 0.28,
+            ease: "power2.out",
+            overwrite: "auto"
+          });
+        }
+
+        button.addEventListener("mouseenter", playButtonHover);
+        button.addEventListener("mouseleave", resetButtonHover);
+        button.addEventListener("focus", playButtonHover);
+        button.addEventListener("blur", resetButtonHover);
+      });
+
+      gsap.utils.toArray(".hardware-panel").forEach(function (panel) {
+        panel.addEventListener("mouseenter", function () {
+          if (!panel.classList.contains("hardware-panel-left")) {
+            gsap.to(panel, {
+              y: -6,
+              scale: 1.015,
+              boxShadow: "inset 0 0 0 1px rgba(18, 20, 28, 0.08), 0 18px 34px rgba(0, 0, 0, 0.1)",
+              duration: 0.32,
+              ease: "power2.out",
+              overwrite: "auto"
+            });
+          }
+          var panelGraphic = panel.querySelector(".hardware-svg");
+          if (panelGraphic) {
+            gsap.to(panelGraphic, { scale: 1.025, duration: 0.36, ease: "power2.out", overwrite: "auto" });
+          }
+        });
+
+        panel.addEventListener("mouseleave", function () {
+          if (!panel.classList.contains("hardware-panel-left")) {
+            gsap.to(panel, {
+              y: 0,
+              scale: 1,
+              boxShadow: "inset 0 0 0 1px rgba(18, 20, 28, 0.06)",
+              duration: 0.28,
+              ease: "power2.out",
+              overwrite: "auto"
+            });
+          }
+          var panelGraphic = panel.querySelector(".hardware-svg");
+          if (panelGraphic) {
+            gsap.to(panelGraphic, { scale: 1, duration: 0.3, ease: "power2.out", overwrite: "auto" });
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
