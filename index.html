@@ -629,9 +629,12 @@
     }
 
     .hardware-image-left {
-      top: 50%;
+      position: static;
+      width: auto;
+      height: clamp(300px, 28vw, 390px);
       max-width: 88%;
-      max-height: 72%;
+      max-height: none;
+      translate: none;
     }
 
     .hardware-copy {
