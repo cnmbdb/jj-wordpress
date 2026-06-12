@@ -1252,7 +1252,7 @@
       }
 
       if (prefersReduced) {
-        gsap.set([".hero-card", ".topbar", "h1 span", ".subcopy", ".actions", ".profile-card", ".stickers", ".scribble", ".stamp"], { clearProps: "all" });
+        gsap.set([".hero-card", ".topbar", "h1 span", ".subcopy", ".actions", ".profile-card", ".stickers", ".scribble", ".stamp", "#apple-footer-root", "#apple-footer-sections > *", "#apple-footer-bottom"], { clearProps: "all" });
       } else {
         var intro = gsap.timeline({ defaults: { duration: 0.8 } });
         intro
@@ -1294,6 +1294,25 @@
           });
         } else {
           hardwareIntro.play(0);
+        }
+
+        var footerIntro = gsap.timeline({ paused: true });
+        footerIntro
+          .from("#apple-footer-root", { autoAlpha: 0, y: 58, scale: 0.97, duration: 0.76, ease: "power3.out" })
+          .from("#apple-footer-sections > *", { autoAlpha: 0, y: 28, stagger: 0.055, duration: 0.46, ease: "power2.out" }, "-=0.42")
+          .from("#apple-footer-bottom", { autoAlpha: 0, y: 18, duration: 0.42, ease: "power2.out" }, "-=0.18");
+
+        if (window.ScrollTrigger) {
+          ScrollTrigger.create({
+            trigger: "#apple-footer-root",
+            start: "top 82%",
+            once: true,
+            onEnter: function () {
+              footerIntro.play(0);
+            }
+          });
+        } else {
+          footerIntro.play(0);
         }
       }
 
