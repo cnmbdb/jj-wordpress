@@ -651,7 +651,7 @@
       margin: 0;
       font-size: clamp(28px, 3vw, 46px);
       line-height: 1.08;
-      font-weight: 800;
+      font-weight: 600;
       letter-spacing: 0.01em;
       color: #101219;
       white-space: nowrap;
@@ -663,7 +663,7 @@
       color: rgba(17, 19, 26, 0.68);
       font-size: clamp(15px, 1.3vw, 18px);
       line-height: 1.65;
-      font-weight: 700;
+      font-weight: 400;
     }
 
     .hardware-action {
@@ -913,16 +913,23 @@
       .nav {
         justify-content: flex-start;
         max-width: 100%;
-        gap: 10px;
-        flex-wrap: wrap;
+        gap: 7px;
+        flex-wrap: nowrap;
         overflow: visible;
       }
 
+      .nav-item {
+        flex: 0.92 1 0;
+        min-width: 0;
+      }
+
       .nav-pill {
+        flex: 1 1 0;
         min-width: auto;
-        min-height: 38px;
-        padding: 0 16px;
-        font-size: 12px;
+        width: 100%;
+        min-height: 36px;
+        padding: 0 8px;
+        font-size: 11.5px;
       }
 
       .product-menu {
@@ -1023,10 +1030,10 @@
           <div class="nav-item product-nav">
             <a target="_top" class="nav-pill" href="#products" aria-haspopup="true" aria-expanded="false" aria-controls="product-menu">产品</a>
             <div class="product-menu" id="product-menu" aria-label="产品二级导航">
-              <a target="_top" class="submenu-pill" href="#token-api">Token API</a>
-              <a target="_top" class="submenu-pill" href="#telegram-bot">TelegramBot</a>
-              <a target="_top" class="submenu-pill" href="#ets">ETS插件扩展平台</a>
-              <a target="_top" class="submenu-pill" href="#vps">服务器/VPS</a>
+              <a target="_top" class="submenu-pill" href="https://token.macosabc.com">Token API</a>
+              <a target="_top" class="submenu-pill" href="https://telegrampress.hfz.pw">TelegramBot</a>
+              <a target="_top" class="submenu-pill" href="https://dujiaoka-ets.hfz.pw">ETS插件扩展平台</a>
+              <a target="_top" class="submenu-pill" href="https://cluod.hfz.pw">服务器/VPS</a>
             </div>
           </div>
           <a target="_top" class="nav-pill" href="https://hfz.pw/home">博客/文章</a>
@@ -1049,7 +1056,7 @@
           </p>
           <div class="actions">
             <a target="_top" class="button primary" href="https://hfz.pw/home">加入俱乐部</a>
-            <a target="_top" class="button secondary" href="#learn">了解更多</a>
+            <a target="_top" class="button secondary" href="https://hfz.pw/home">了解更多</a>
           </div>
 
           <svg class="scribble arrow-small" viewBox="0 0 170 220" fill="none" aria-hidden="true">
@@ -1241,7 +1248,7 @@
         sectionsWrap.style.display = isMobile ? "block" : "grid";
         sectionsWrap.style.gridTemplateColumns = isMobile ? "" : "repeat(6,minmax(0,1fr))";
         sectionsWrap.style.gap = isMobile ? "0" : "24px";
-        sectionsWrap.style.padding = isMobile ? "12px 20px 0" : "30px 28px 18px";
+        sectionsWrap.style.padding = isMobile ? "12px 20px 18px" : "30px 28px 18px";
         footerBottom.style.padding = isMobile ? "18px 20px 24px" : "18px 28px 24px";
 
         sections.forEach(function (section) {
