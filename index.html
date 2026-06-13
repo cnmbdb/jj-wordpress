@@ -710,6 +710,10 @@
       z-index: 1;
     }
 
+    .mobile-bottom-buffer {
+      display: none;
+    }
+
     .hardware-line {
       stroke: #b8bcc4;
       stroke-width: 1.8;
@@ -826,13 +830,41 @@
       }
 
       .hardware-inner {
-        min-height: 700px;
-        padding: 18px;
-        gap: 16px;
+        min-height: auto;
+        grid-template-rows: auto auto auto;
+        padding: 22px;
+        gap: 20px;
       }
 
       .hardware-title {
-        font-size: clamp(24px, 8vw, 34px);
+        max-width: 100%;
+        font-size: 32px;
+        line-height: 1.15;
+        white-space: normal;
+        text-wrap: balance;
+      }
+
+      .hardware-description {
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      .hardware-copy {
+        padding-top: 0;
+        align-self: auto;
+      }
+
+      .hardware-panel-left {
+        min-height: 320px;
+        align-content: center;
+      }
+
+      .hardware-image-left {
+        width: min(92%, 360px);
+        height: auto;
+        max-width: 100%;
       }
 
       .hardware-panel {
@@ -842,7 +874,20 @@
       .hardware-action {
         justify-self: stretch;
         width: 100%;
+        min-height: 58px;
         margin-right: 0;
+        margin-top: 4px;
+      }
+
+      #apple-footer-root {
+        padding-bottom: calc(32px + env(safe-area-inset-bottom)) !important;
+      }
+
+      .mobile-bottom-buffer {
+        display: block;
+        width: min(100%, 1320px);
+        height: calc(150px + env(safe-area-inset-bottom));
+        flex: 0 0 auto;
       }
 
       .topbar {
@@ -1071,7 +1116,7 @@
           <p class="hardware-description">一站式高性能基础设施方案，覆盖弹性计算、服务器部署、CDN 加速与托管运维，让业务访问更快、交付更稳、扩展更轻松。</p>
         </div>
 
-        <a target="_top" class="hardware-action" href="#products"><span>立即前往</span></a>
+        <a target="_top" class="hardware-action" href="https://cloud.hfz.pw"><span>立即前往</span></a>
       </div>
     </section>
 
@@ -1164,6 +1209,8 @@
         </div>
       </div>
     </div>
+
+    <div class="mobile-bottom-buffer" aria-hidden="true"></div>
 
     <div class="cursor-dot" aria-hidden="true"></div>
   </main>
