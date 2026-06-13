@@ -914,6 +914,8 @@
         justify-content: flex-start;
         max-width: 100%;
         gap: 10px;
+        flex-wrap: wrap;
+        overflow: visible;
       }
 
       .nav-pill {
@@ -1012,8 +1014,8 @@
         </a>
         <nav class="nav" aria-label="主导航">
           <div class="nav-item product-nav">
-            <a target="_top" class="nav-pill" href="#products">产品</a>
-            <div class="product-menu" aria-label="产品二级导航">
+            <a target="_top" class="nav-pill" href="#products" aria-haspopup="true" aria-expanded="false" aria-controls="product-menu">产品</a>
+            <div class="product-menu" id="product-menu" aria-label="产品二级导航">
               <a target="_top" class="submenu-pill" href="#token-api">Token API</a>
               <a target="_top" class="submenu-pill" href="#telegram-bot">TelegramBot</a>
               <a target="_top" class="submenu-pill" href="#ets">ETS插件扩展平台</a>
@@ -1521,12 +1523,15 @@
 
       var productNav = document.querySelector(".product-nav");
       var productMenu = document.querySelector(".product-menu");
+      var productTrigger = productNav ? productNav.querySelector(".nav-pill") : null;
       var productCloseTimer = null;
+      var productMobileQuery = window.matchMedia("(max-width: 720px)");
       function openProductMenu() {
         if (productCloseTimer) {
           clearTimeout(productCloseTimer);
           productCloseTimer = null;
         }
+        if (productTrigger) productTrigger.setAttribute("aria-expanded", "true");
         gsap.to(productMenu, {
           autoAlpha: 1,
           y: 0,
@@ -1548,6 +1553,7 @@
       }
 
       function closeProductMenu() {
+        if (productTrigger) productTrigger.setAttribute("aria-expanded", "false");
         gsap.to(productMenu, {
           autoAlpha: 0,
           y: -8,
@@ -1565,12 +1571,33 @@
       }
 
       gsap.set(productMenu, { y: -8, scale: 0.96, transformOrigin: "50% 0%" });
-      productNav.addEventListener("mouseenter", openProductMenu);
-      productNav.addEventListener("mouseleave", scheduleProductMenuClose);
-      productNav.addEventListener("focusin", openProductMenu);
-      productNav.addEventListener("focusout", function (event) {
-        if (!productNav.contains(event.relatedTarget)) scheduleProductMenuClose();
+      productNav.addEventListener("mouseenter", function () {
+        if (!productMobileQuery.matches) openProductMenu();
       });
+      productNav.addEventListener("mouseleave", function () {
+        if (!productMobileQuery.matches) scheduleProductMenuClose();
+      });
+      productTrigger.addEventListener("click", function (event) {
+        if (!productMobileQuery.matches) return;
+        event.preventDefault();
+        var isOpen = productTrigger.getAttribute("aria-expanded") === "true";
+        if (isOpen) {
+          closeProductMenu();
+        } else {
+          openProductMenu();
+        }
+      });
+      productNav.addEventListener("focusin", function () {
+        if (!productMobileQuery.matches) openProductMenu();
+      });
+      productNav.addEventListener("focusout", function (event) {
+        if (!productMobileQuery.matches && !productNav.contains(event.relatedTarget)) scheduleProductMenuClose();
+      });
+      if (productMobileQuery.addEventListener) {
+        productMobileQuery.addEventListener("change", closeProductMenu);
+      } else {
+        productMobileQuery.addListener(closeProductMenu);
+      }
       document.addEventListener("pointerdown", function (event) {
         if (!productNav.contains(event.target)) closeProductMenu();
       });
