@@ -399,4 +399,21 @@ button[data-nav-id]:hover+div[id^="nav-panel-"],button[data-nav-id]:focus+div[id
   var footerLogo=document.querySelector('footer .mt-8 a:last-child');
   if(footerLogo){footerLogo.href='https://hfz.pw/';footerLogo.setAttribute('target','_top');}
 
+})();</script><script id="jj-default-link-target">(function(){
+  var fallback='https://hfz.pw/home';
+  var explicitHosts=['hfz.pw','store.hfz.pw','token.macosabc.com','telegrampress.hfz.pw','dujiaoka-ets.hfz.pw','cloud.hfz.pw','t.me'];
+  function isExplicit(url){
+    try{var u=new URL(url,location.href);return explicitHosts.indexOf(u.hostname)!==-1;}catch(e){return false;}
+  }
+  function shouldFallback(a){
+    var raw=a.getAttribute('href')||'';
+    if(!raw||raw==='#'||raw.indexOf('vercel.com')!==-1||raw.indexOf('community.vercel.com')!==-1)return !isExplicit(raw);
+    return false;
+  }
+  document.querySelectorAll('a').forEach(function(a){
+    if(shouldFallback(a)){a.href=fallback;a.setAttribute('target','_top');}
+  });
+  document.querySelectorAll('button:not(.jj-mobile-menu-button):not([role="menuitem"]):not([data-nav-id])').forEach(function(btn){
+    btn.addEventListener('click',function(){window.location.href=fallback;});
+  });
 })();</script></body></html>
