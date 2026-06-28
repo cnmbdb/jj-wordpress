@@ -441,4 +441,89 @@ button[data-nav-id]:hover+div[id^="nav-panel-"],button[data-nav-id]:focus+div[id
   document.querySelectorAll('button:not(.jj-mobile-menu-button):not([role="menuitem"]):not([data-nav-id])').forEach(function(btn){
     btn.addEventListener('click',function(){window.location.href=fallback;});
   });
-})();</script></body></html>
+	})();</script><script id="jj-header-tools-and-i18n">(function(){
+  var authUrl='https://hfz.pw/user-sign-2-2?tab=signin';
+  var githubUrl='https://github.com/cnmbdb';
+  var languages=[
+    ['zh-CN','简体中文'],['en','English'],['zh-TW','繁體中文'],['ru','Русский'],['ja','日本語'],['ko','한국어'],['hi','हिन्दी']
+  ];
+  var translations={
+    '代理基础设施':{en:'Agent Infrastructure','zh-TW':'代理基礎設施',ru:'Инфраструктура агентов',ja:'エージェント基盤',ko:'에이전트 인프라',hi:'एजेंट अवसंरचना'},
+    '立即部署':{en:'Deploy Now','zh-TW':'立即部署',ru:'Развернуть сейчас',ja:'今すぐデプロイ',ko:'지금 배포',hi:'अभी डिप्लॉय करें'},
+    '登录/注册':{en:'Log in / Sign up','zh-TW':'登入/註冊',ru:'Войти / Регистрация',ja:'ログイン/登録',ko:'로그인/가입',hi:'लॉग इन / साइन अप'},
+    '让编码代理':{en:'Let coding agents','zh-TW':'讓編碼代理',ru:'Позвольте кодовым агентам',ja:'コーディングエージェントに',ko:'코딩 에이전트가',hi:'कोडिंग एजेंटों को'},
+    '在沙盒虚拟机中部署应用程序和代理':{en:'deploy applications and agents in sandboxed virtual machines','zh-TW':'在沙盒虛擬機中部署應用程式和代理',ru:'развертывать приложения и агентов в изолированных виртуальных машинах',ja:'サンドボックス仮想マシンでアプリとエージェントをデプロイ',ko:'샌드박스 가상 머신에서 앱과 에이전트를 배포',hi:'सैंडबॉक्स वर्चुअल मशीनों में ऐप और एजेंट तैनात करने दें'},
+    '由代理自动执行。':{en:'automated by agents.','zh-TW':'由代理自動執行。',ru:'автоматизировано агентами.',ja:'エージェントが自動実行します。',ko:'에이전트가 자동으로 실행합니다.',hi:'एजेंटों द्वारा स्वचालित।'},
+    '首页':{en:'Home','zh-TW':'首頁',ru:'Главная',ja:'ホーム',ko:'홈',hi:'होम'},
+    '网站首页':{en:'Website Home','zh-TW':'網站首頁',ru:'Главная сайта',ja:'サイトトップ',ko:'웹사이트 홈',hi:'वेबसाइट होम'},
+    '商城首页':{en:'Store Home','zh-TW':'商城首頁',ru:'Главная магазина',ja:'ストアトップ',ko:'스토어 홈',hi:'स्टोर होम'},
+    '产品':{en:'Products','zh-TW':'產品',ru:'Продукты',ja:'製品',ko:'제품',hi:'उत्पाद'},
+    '教程导航':{en:'Tutorials','zh-TW':'教學導航',ru:'Учебники',ja:'チュートリアル',ko:'튜토리얼',hi:'ट्यूटोरियल'},
+    '基础教学':{en:'Basics','zh-TW':'基礎教學',ru:'Основы',ja:'基礎講座',ko:'기초 강의',hi:'बुनियादी पाठ'},
+    '发卡网站':{en:'Card-selling Sites','zh-TW':'發卡網站',ru:'Сайты выдачи карт',ja:'カード販売サイト',ko:'카드 판매 사이트',hi:'कार्ड साइट'},
+    '收款 / 支付程序':{en:'Payment Programs','zh-TW':'收款 / 支付程式',ru:'Платежные программы',ja:'決済プログラム',ko:'결제 프로그램',hi:'भुगतान प्रोग्राम'},
+    'Telegram机器人':{en:'Telegram Bots','zh-TW':'Telegram 機器人',ru:'Telegram-боты',ja:'Telegramボット',ko:'Telegram 봇',hi:'Telegram बॉट'},
+    '合作':{en:'Partners','zh-TW':'合作',ru:'Партнерство',ja:'提携',ko:'협력',hi:'सहयोग'},
+    '担保合作平台':{en:'Escrow Partner Platform','zh-TW':'擔保合作平台',ru:'Платформа гарантийного партнерства',ja:'エスクロー提携プラットフォーム',ko:'에스크로 협력 플랫폼',hi:'एस्क्रो सहयोग प्लेटफ़ॉर्म'},
+    '入驻 / 发布教程':{en:'Join / Publish Tutorials','zh-TW':'入駐 / 發布教學',ru:'Разместиться / опубликовать уроки',ja:'参加 / チュートリアル公開',ko:'입점 / 튜토리얼 게시',hi:'जुड़ें / ट्यूटोरियल प्रकाशित करें'},
+    '克隆代理本站':{en:'Clone This Site','zh-TW':'克隆代理本站',ru:'Клонировать этот сайт',ja:'このサイトを複製',ko:'이 사이트 복제',hi:'इस साइट को क्लोन करें'},
+    '平台入口':{en:'Platform Entry','zh-TW':'平台入口',ru:'Вход на платформу',ja:'プラットフォーム入口',ko:'플랫폼 입구',hi:'प्लेटफ़ॉर्म प्रवेश'},
+    '自由货源平台':{en:'Open Supply Platform','zh-TW':'自由貨源平台',ru:'Свободная товарная платформа',ja:'自由仕入れプラットフォーム',ko:'자유 소싱 플랫폼',hi:'ओपन सप्लाई प्लेटफ़ॉर्म'},
+    '在线联系':{en:'Contact','zh-TW':'線上聯絡',ru:'Связаться онлайн',ja:'オンライン連絡',ko:'온라인 문의',hi:'ऑनलाइन संपर्क'},
+    'Telegram客服':{en:'Telegram Support','zh-TW':'Telegram 客服',ru:'Поддержка Telegram',ja:'Telegramサポート',ko:'Telegram 고객지원',hi:'Telegram सहायता'},
+    '服务器 / VPS':{en:'Servers / VPS','zh-TW':'伺服器 / VPS',ru:'Серверы / VPS',ja:'サーバー / VPS',ko:'서버 / VPS',hi:'सर्वर / VPS'},
+    '服务器/VPS':{en:'Servers / VPS','zh-TW':'伺服器/VPS',ru:'Серверы/VPS',ja:'サーバー/VPS',ko:'서버/VPS',hi:'सर्वर/VPS'},
+    '所有系统正常':{en:'All systems operational','zh-TW':'所有系統正常',ru:'Все системы работают',ja:'すべてのシステム正常',ko:'모든 시스템 정상',hi:'सभी सिस्टम सामान्य'},
+    'Copyright © 2026 HFZ. 保留所有权利。':{en:'Copyright © 2026 HFZ. All rights reserved.','zh-TW':'Copyright © 2026 HFZ. 保留所有權利。',ru:'Copyright © 2026 HFZ. Все права защищены.',ja:'Copyright © 2026 HFZ. All rights reserved.','ko':'Copyright © 2026 HFZ. 모든 권리 보유.',hi:'Copyright © 2026 HFZ. सर्वाधिकार सुरक्षित।'},
+    '简体中文':{en:'Simplified Chinese','zh-TW':'簡體中文',ru:'Упрощенный китайский',ja:'簡体字中国語',ko:'간체 중국어',hi:'सरलीकृत चीनी'},
+    'English':{en:'English','zh-TW':'英文',ru:'Английский',ja:'英語',ko:'영어',hi:'अंग्रेज़ी'},
+    '繁體中文':{en:'Traditional Chinese','zh-TW':'繁體中文',ru:'Традиционный китайский',ja:'繁体字中国語',ko:'번체 중국어',hi:'पारंपरिक चीनी'},
+    'Русский':{en:'Russian','zh-TW':'俄語',ru:'Русский',ja:'ロシア語',ko:'러시아어',hi:'रूसी'},
+    '日本語':{en:'Japanese','zh-TW':'日語',ru:'Японский',ja:'日本語',ko:'일본어',hi:'जापानी'},
+    '한국어':{en:'Korean','zh-TW':'韓語',ru:'Корейский',ja:'韓国語',ko:'한국어',hi:'कोरियाई'},
+    'हिन्दी':{en:'Hindi','zh-TW':'印度語',ru:'Хинди',ja:'ヒンディー語',ko:'힌디어',hi:'हिन्दी'}
+  };
+  function icon(name){
+    if(name==='globe')return '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 0 20M12 2a15.3 15.3 0 0 0 0 20"></path></svg>';
+    return '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 5.8c1.02 0 2.04.14 3 .41 2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"></path></svg>';
+  }
+  function buildHeaderTools(){
+    var wrap=document.querySelector('#marketing-header .ml-auto');
+    if(!wrap)return;
+    wrap.innerHTML='<div class="jj-header-tools"><div class="jj-lang-wrap"><button class="jj-icon-btn jj-lang-toggle" type="button" aria-label="Language" aria-expanded="false">'+icon('globe')+'</button><div class="jj-lang-menu" role="menu">'+languages.map(function(l){return '<button type="button" role="menuitem" data-lang="'+l[0]+'">'+l[1]+'</button>';}).join('')+'</div></div><a class="jj-icon-btn" href="'+githubUrl+'" target="_top" aria-label="GitHub">'+icon('github')+'</a><a class="jj-login-btn" href="'+authUrl+'" target="_top">登录/注册</a></div>';
+    var langWrap=wrap.querySelector('.jj-lang-wrap');
+    var toggle=wrap.querySelector('.jj-lang-toggle');
+    toggle.addEventListener('click',function(e){e.stopPropagation();var open=langWrap.classList.toggle('open');toggle.setAttribute('aria-expanded',open?'true':'false');});
+    wrap.querySelectorAll('[data-lang]').forEach(function(btn){btn.addEventListener('click',function(){setLanguage(btn.getAttribute('data-lang'));langWrap.classList.remove('open');toggle.setAttribute('aria-expanded','false');});});
+    document.addEventListener('click',function(){langWrap.classList.remove('open');toggle.setAttribute('aria-expanded','false');});
+  }
+  var originals=new WeakMap();
+  function walkText(fn){
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(node){
+      if(!node.nodeValue.trim())return NodeFilter.FILTER_REJECT;
+      if(node.parentElement&&node.parentElement.closest('script,style,svg,noscript'))return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }});
+    var node;while((node=walker.nextNode()))fn(node);
+  }
+  function captureOriginals(){walkText(function(node){if(!originals.has(node))originals.set(node,node.nodeValue);});}
+  function setLanguage(lang){
+    localStorage.setItem('hfz-lang',lang);
+    document.documentElement.lang=lang;
+    walkText(function(node){
+      var original=originals.get(node)||node.nodeValue;
+      var trimmed=original.trim();
+      var leading=original.match(/^\s*/)[0];
+      var trailing=original.match(/\s*$/)[0];
+      var next=trimmed;
+      if(lang!=='zh-CN'&&translations[trimmed]&&translations[trimmed][lang])next=translations[trimmed][lang];
+      node.nodeValue=leading+next+trailing;
+    });
+    document.querySelectorAll('[data-lang]').forEach(function(btn){btn.classList.toggle('active',btn.getAttribute('data-lang')===lang);});
+  }
+  buildHeaderTools();
+  captureOriginals();
+  setLanguage(localStorage.getItem('hfz-lang')||'zh-CN');
+})();</script><style id="jj-header-tools-style">
+.jj-header-tools{display:flex;align-items:center;gap:12px}.jj-icon-btn{width:38px;height:38px;border:1px solid rgba(255,255,255,.18);border-radius:10px;color:#fff;background:transparent;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;transition:background .15s ease,border-color .15s ease}.jj-icon-btn:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.32)}.jj-login-btn{height:38px;padding:0 18px;border-radius:10px;background:#fff;color:#000;font-size:14px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;white-space:nowrap}.jj-lang-wrap{position:relative}.jj-lang-menu{position:absolute;right:0;top:calc(100% + 10px);min-width:168px;padding:8px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:#050505;box-shadow:0 22px 60px rgba(0,0,0,.48);display:none;z-index:200}.jj-lang-wrap.open .jj-lang-menu{display:grid;gap:2px}.jj-lang-menu button{height:34px;padding:0 10px;border-radius:8px;color:rgba(255,255,255,.78);text-align:left;font-size:13px;background:transparent}.jj-lang-menu button:hover,.jj-lang-menu button.active{background:rgba(255,255,255,.09);color:#fff}@media(max-width:720px){.jj-header-tools{display:none}}
+</style></body></html>
