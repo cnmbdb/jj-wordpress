@@ -378,4 +378,25 @@ button[data-nav-id]:hover+div[id^="nav-panel-"],button[data-nav-id]:focus+div[id
   if(mobile){
     mobile.innerHTML='<div><h2>产品</h2>'+links.products.map(function(item){return '<a target="_top" href="'+item[1]+'">'+item[0]+'</a>';}).join('')+'</div><div><h2>导航</h2><a target="_top" href="'+links.blog[1]+'">'+links.blog[0]+'</a><a target="_top" href="'+links.roadmap[1]+'">'+links.roadmap[0]+'</a><a target="_top" href="'+links.shop[1]+'">'+links.shop[0]+'</a><a target="_top" href="'+links.auth[1]+'">'+links.auth[0]+'</a></div>';
   }
+
+  var footerSections=[
+    {title:'首页',items:[['网站首页','https://hfz.pw/'],['HF-Web','https://store.hfz.pw/'],['商城首页','https://store.hfz.pw/']]},
+    {title:'产品',items:[['Token API','https://token.macosabc.com/'],['TelegramBot','https://telegrampress.hfz.pw/'],['ETS插件扩展平台','https://dujiaoka-ets.hfz.pw/'],['服务器 / VPS','https://cloud.hfz.pw/']]},
+    {title:'教程导航',items:[['基础教学','https://hfz.pw/'],['发卡网站','https://hfz.pw/'],['收款 / 支付程序','https://hfz.pw/'],['WordPress','https://hfz.pw/'],['HTML','https://hfz.pw/'],['WHMCS','https://hfz.pw/'],['Telegram机器人','https://hfz.pw/'],['ChatGPT','https://hfz.pw/']]},
+    {title:'合作',items:[['担保合作平台','https://hfz.pw/'],['入驻 / 发布教程','https://hfz.pw/'],['克隆代理本站','https://hfz.pw/']]},
+    {title:'平台入口',items:[['自由货源平台','https://hfz.pw/'],['商城首页','https://store.hfz.pw/']]},
+    {title:'在线联系',items:[['Telegram客服','https://t.me/HFTGID']]}
+  ];
+  var footerGrid=document.querySelector('footer nav > div.grid');
+  if(footerGrid){
+    var footerLinkClass='cursor-pointer focus-visible:outline-2 outline-[var(--ds-focus-color)] outline-offset-4 text-[var(--accents-5)] transition-colors duration-100 hover:text-[var(--geist-foreground)] flex items-center gap-1.5 w-fit p-0.5 -ml-0.5';
+    footerGrid.innerHTML=footerSections.map(function(section){
+      return '<div><h2 class="text-gray-1000 text-label-14 font-medium my-[var(--geist-gap-half)]">'+section.title+'</h2><ul class="list-none m-0 p-0">'+section.items.map(function(item){return '<li class="text-gray-900 py-0.5 leading-5"><a target="_top" class="'+footerLinkClass+'" href="'+item[1]+'">'+item[0]+'</a></li>';}).join('')+'</ul></div>';
+    }).join('');
+  }
+  var footerStatus=document.querySelector('footer .mt-8 a:first-child span:last-child');
+  if(footerStatus)footerStatus.textContent='Copyright © 2026 HFZ. 保留所有权利。';
+  var footerLogo=document.querySelector('footer .mt-8 a:last-child');
+  if(footerLogo){footerLogo.href='https://hfz.pw/';footerLogo.setAttribute('target','_top');}
+
 })();</script></body></html>
