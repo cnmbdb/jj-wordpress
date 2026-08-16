@@ -333,7 +333,7 @@ button[data-nav-id]:hover+div[id^="nav-panel-"],button[data-nav-id]:focus+div[id
     blog:['博客/文章','https://hfz.pw/home'],
     roadmap:['路线图','https://hfz.pw/home'],
 	    shop:['商城','https://hfz.pw/shop'],
-	    auth:['登录/注册','https://hfz.pw/user-sign-2-2?tab=signin']
+	    auth:['登录/注册','https://hfz.pw/user-sign-2-2?tab=signin&redirect_to=https%3A%2F%2Fhfz.pw%2Fhome']
 	  };
 	  var footerSections=[
 	    {title:'首页',items:[['博客文章首页','https://hfz.pw/home'],['商城首页','https://hfz.pw/shop']]},
@@ -442,7 +442,7 @@ button[data-nav-id]:hover+div[id^="nav-panel-"],button[data-nav-id]:focus+div[id
     btn.addEventListener('click',function(){window.location.href=fallback;});
   });
 	})();</script><script id="jj-header-tools-and-i18n">(function(){
-  var authUrl='https://hfz.pw/user-sign-2-2?tab=signin';
+  var authUrl='https://hfz.pw/user-sign-2-2?tab=signin&redirect_to=https%3A%2F%2Fhfz.pw%2Fhome';
   var githubUrl='https://github.com/cnmbdb';
   var languages=[
     ['zh-CN','简体中文'],['en','English'],['zh-TW','繁體中文'],['ru','Русский'],['ja','日本語'],['ko','한국어'],['hi','हिन्दी']
@@ -491,6 +491,12 @@ button[data-nav-id]:hover+div[id^="nav-panel-"],button[data-nav-id]:focus+div[id
     var wrap=document.querySelector('#marketing-header .ml-auto');
     if(!wrap)return;
     wrap.innerHTML='<div class="jj-header-tools"><div class="jj-lang-wrap"><button class="jj-icon-btn jj-lang-toggle" type="button" aria-label="Language" aria-expanded="false">'+icon('globe')+'</button><div class="jj-lang-menu" role="menu">'+languages.map(function(l){return '<button type="button" role="menuitem" data-lang="'+l[0]+'">'+l[1]+'</button>';}).join('')+'</div></div><a class="jj-icon-btn" href="'+githubUrl+'" target="_top" aria-label="GitHub">'+icon('github')+'</a><a class="jj-login-btn" href="'+authUrl+'" target="_top">登录/注册</a></div>';
+    var login=wrap.querySelector('.jj-login-btn');
+    login.addEventListener('click',function(e){
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      window.location.assign(authUrl);
+    });
     var langWrap=wrap.querySelector('.jj-lang-wrap');
     var toggle=wrap.querySelector('.jj-lang-toggle');
     toggle.addEventListener('click',function(e){e.stopPropagation();var open=langWrap.classList.toggle('open');toggle.setAttribute('aria-expanded',open?'true':'false');});
