@@ -1,0 +1,1006 @@
+{
+  "pack": "DMJDuckXemoji",
+  "title": "Telegram Duck X",
+  "items": [
+    {
+      "id": "5766933926429854499",
+      "alt": "👍",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5766933926429854499.tgs",
+      "thumbnail_url": "./thumbs/5766933926429854499.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5798587088077066898",
+      "alt": "👋",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5798587088077066898.tgs",
+      "thumbnail_url": "./thumbs/5798587088077066898.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5864197326318342099",
+      "alt": "💻",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5864197326318342099.tgs",
+      "thumbnail_url": "./thumbs/5864197326318342099.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5859232223865081255",
+      "alt": "📱",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5859232223865081255.tgs",
+      "thumbnail_url": "./thumbs/5859232223865081255.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5974287633151432130",
+      "alt": "💃",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5974287633151432130.tgs",
+      "thumbnail_url": "./thumbs/5974287633151432130.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5789918701612439655",
+      "alt": "😀",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5789918701612439655.tgs",
+      "thumbnail_url": "./thumbs/5789918701612439655.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5848183076898737707",
+      "alt": "🚽",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5848183076898737707.tgs",
+      "thumbnail_url": "./thumbs/5848183076898737707.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767302761041366139",
+      "alt": "😂",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767302761041366139.tgs",
+      "thumbnail_url": "./thumbs/5767302761041366139.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767014349692472143",
+      "alt": "🗿",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767014349692472143.tgs",
+      "thumbnail_url": "./thumbs/5767014349692472143.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5766993278582918157",
+      "alt": "📱",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5766993278582918157.tgs",
+      "thumbnail_url": "./thumbs/5766993278582918157.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767258028956978383",
+      "alt": "💬",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767258028956978383.tgs",
+      "thumbnail_url": "./thumbs/5767258028956978383.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767194849988054495",
+      "alt": "📲",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767194849988054495.tgs",
+      "thumbnail_url": "./thumbs/5767194849988054495.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767089988361522342",
+      "alt": "🗂",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767089988361522342.tgs",
+      "thumbnail_url": "./thumbs/5767089988361522342.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767358836134382747",
+      "alt": "🥳",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767358836134382747.tgs",
+      "thumbnail_url": "./thumbs/5767358836134382747.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5766955693324111246",
+      "alt": "🎤",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5766955693324111246.tgs",
+      "thumbnail_url": "./thumbs/5766955693324111246.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5769337381538761899",
+      "alt": "🍕",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5769337381538761899.tgs",
+      "thumbnail_url": "./thumbs/5769337381538761899.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "6035087937517916366",
+      "alt": "🤗",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./6035087937517916366.tgs",
+      "thumbnail_url": "./thumbs/6035087937517916366.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767325541547904537",
+      "alt": "☎️",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767325541547904537.tgs",
+      "thumbnail_url": "./thumbs/5767325541547904537.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5769268580457646836",
+      "alt": "👨‍👩‍👧‍👦",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5769268580457646836.tgs",
+      "thumbnail_url": "./thumbs/5769268580457646836.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767392568807525816",
+      "alt": "🎧",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767392568807525816.tgs",
+      "thumbnail_url": "./thumbs/5767392568807525816.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767392598872297368",
+      "alt": "🖥",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767392598872297368.tgs",
+      "thumbnail_url": "./thumbs/5767392598872297368.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5769423731856248012",
+      "alt": "👩",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5769423731856248012.tgs",
+      "thumbnail_url": "./thumbs/5769423731856248012.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767319915140746934",
+      "alt": "🎀",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767319915140746934.tgs",
+      "thumbnail_url": "./thumbs/5767319915140746934.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767003736828283696",
+      "alt": "👋",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767003736828283696.tgs",
+      "thumbnail_url": "./thumbs/5767003736828283696.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767420838282267710",
+      "alt": "👍",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767420838282267710.tgs",
+      "thumbnail_url": "./thumbs/5767420838282267710.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5766981007861354152",
+      "alt": "🇮🇹",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5766981007861354152.tgs",
+      "thumbnail_url": "./thumbs/5766981007861354152.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767181260711529934",
+      "alt": "👋",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767181260711529934.tgs",
+      "thumbnail_url": "./thumbs/5767181260711529934.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5769207437303221627",
+      "alt": "🔄",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5769207437303221627.tgs",
+      "thumbnail_url": "./thumbs/5769207437303221627.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767155112950631350",
+      "alt": "🧢",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767155112950631350.tgs",
+      "thumbnail_url": "./thumbs/5767155112950631350.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767212287555276096",
+      "alt": "🎂",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767212287555276096.tgs",
+      "thumbnail_url": "./thumbs/5767212287555276096.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5766866362299321344",
+      "alt": "😔",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5766866362299321344.tgs",
+      "thumbnail_url": "./thumbs/5766866362299321344.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5766910798030966025",
+      "alt": "🎧",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5766910798030966025.tgs",
+      "thumbnail_url": "./thumbs/5766910798030966025.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767020817913220564",
+      "alt": "☕️",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767020817913220564.tgs",
+      "thumbnail_url": "./thumbs/5767020817913220564.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5766969969795403540",
+      "alt": "😨",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5766969969795403540.tgs",
+      "thumbnail_url": "./thumbs/5766969969795403540.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767051514044485340",
+      "alt": "😨",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767051514044485340.tgs",
+      "thumbnail_url": "./thumbs/5767051514044485340.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5789605753115384004",
+      "alt": "😈",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5789605753115384004.tgs",
+      "thumbnail_url": "./thumbs/5789605753115384004.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5766894163622628142",
+      "alt": "🧪",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5766894163622628142.tgs",
+      "thumbnail_url": "./thumbs/5766894163622628142.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5897474556834091884",
+      "alt": "🙏",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5897474556834091884.tgs",
+      "thumbnail_url": "./thumbs/5897474556834091884.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5897982617105469070",
+      "alt": "✂️",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5897982617105469070.tgs",
+      "thumbnail_url": "./thumbs/5897982617105469070.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767182991583350962",
+      "alt": "👻",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767182991583350962.tgs",
+      "thumbnail_url": "./thumbs/5767182991583350962.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767359209796537766",
+      "alt": "📲",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767359209796537766.tgs",
+      "thumbnail_url": "./thumbs/5767359209796537766.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767381268748569497",
+      "alt": "👮",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767381268748569497.tgs",
+      "thumbnail_url": "./thumbs/5767381268748569497.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "6017305441472614486",
+      "alt": "☕️",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./6017305441472614486.tgs",
+      "thumbnail_url": "./thumbs/6017305441472614486.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5766931615737449648",
+      "alt": "📆",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5766931615737449648.tgs",
+      "thumbnail_url": "./thumbs/5766931615737449648.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5766906150876351635",
+      "alt": "✳️",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5766906150876351635.tgs",
+      "thumbnail_url": "./thumbs/5766906150876351635.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5940627111164251411",
+      "alt": "💪",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5940627111164251411.tgs",
+      "thumbnail_url": "./thumbs/5940627111164251411.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767243164075166617",
+      "alt": "🍿",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767243164075166617.tgs",
+      "thumbnail_url": "./thumbs/5767243164075166617.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5897670776709977251",
+      "alt": "😶",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5897670776709977251.tgs",
+      "thumbnail_url": "./thumbs/5897670776709977251.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5766889228705205205",
+      "alt": "🧹",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5766889228705205205.tgs",
+      "thumbnail_url": "./thumbs/5766889228705205205.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767099626268135605",
+      "alt": "😉",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767099626268135605.tgs",
+      "thumbnail_url": "./thumbs/5767099626268135605.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767340509508931945",
+      "alt": "🗺",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767340509508931945.tgs",
+      "thumbnail_url": "./thumbs/5767340509508931945.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767050277093903531",
+      "alt": "📕",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767050277093903531.tgs",
+      "thumbnail_url": "./thumbs/5767050277093903531.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767151002666929821",
+      "alt": "🚫",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767151002666929821.tgs",
+      "thumbnail_url": "./thumbs/5767151002666929821.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767357792457330397",
+      "alt": "☁️",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767357792457330397.tgs",
+      "thumbnail_url": "./thumbs/5767357792457330397.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5766905227458383300",
+      "alt": "📱",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5766905227458383300.tgs",
+      "thumbnail_url": "./thumbs/5766905227458383300.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767107597727436634",
+      "alt": "🎙",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767107597727436634.tgs",
+      "thumbnail_url": "./thumbs/5767107597727436634.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767288471685171967",
+      "alt": "🛍",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767288471685171967.tgs",
+      "thumbnail_url": "./thumbs/5767288471685171967.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5766968762909592812",
+      "alt": "👍",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5766968762909592812.tgs",
+      "thumbnail_url": "./thumbs/5766968762909592812.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767285044301270071",
+      "alt": "👋",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767285044301270071.tgs",
+      "thumbnail_url": "./thumbs/5767285044301270071.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767156873887223565",
+      "alt": "🤑",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767156873887223565.tgs",
+      "thumbnail_url": "./thumbs/5767156873887223565.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767418076618296566",
+      "alt": "✳️",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767418076618296566.tgs",
+      "thumbnail_url": "./thumbs/5767418076618296566.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767090374908578775",
+      "alt": "😋",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767090374908578775.tgs",
+      "thumbnail_url": "./thumbs/5767090374908578775.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5940283273262403173",
+      "alt": "🚗",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5940283273262403173.tgs",
+      "thumbnail_url": "./thumbs/5940283273262403173.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5951891646445523477",
+      "alt": "📰",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5951891646445523477.tgs",
+      "thumbnail_url": "./thumbs/5951891646445523477.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767187196356333139",
+      "alt": "😋",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767187196356333139.tgs",
+      "thumbnail_url": "./thumbs/5767187196356333139.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767284838142839879",
+      "alt": "🖤",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767284838142839879.tgs",
+      "thumbnail_url": "./thumbs/5767284838142839879.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5938293140036259040",
+      "alt": "🧙",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5938293140036259040.tgs",
+      "thumbnail_url": "./thumbs/5938293140036259040.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5776249663250238279",
+      "alt": "🌀",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5776249663250238279.tgs",
+      "thumbnail_url": "./thumbs/5776249663250238279.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5938290356897451715",
+      "alt": "🏎",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5938290356897451715.tgs",
+      "thumbnail_url": "./thumbs/5938290356897451715.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5956569406996747523",
+      "alt": "💪",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5956569406996747523.tgs",
+      "thumbnail_url": "./thumbs/5956569406996747523.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5926792673611485616",
+      "alt": "🗣",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5926792673611485616.tgs",
+      "thumbnail_url": "./thumbs/5926792673611485616.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "6006107551198874621",
+      "alt": "👋",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./6006107551198874621.tgs",
+      "thumbnail_url": "./thumbs/6006107551198874621.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5771556513831194820",
+      "alt": "👻",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5771556513831194820.tgs",
+      "thumbnail_url": "./thumbs/5771556513831194820.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5859480923946356143",
+      "alt": "📱",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5859480923946356143.tgs",
+      "thumbnail_url": "./thumbs/5859480923946356143.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5859429474533117700",
+      "alt": "🎅",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5859429474533117700.tgs",
+      "thumbnail_url": "./thumbs/5859429474533117700.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5787467546596743616",
+      "alt": "🤭",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5787467546596743616.tgs",
+      "thumbnail_url": "./thumbs/5787467546596743616.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5978817028352381016",
+      "alt": "🫵",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5978817028352381016.tgs",
+      "thumbnail_url": "./thumbs/5978817028352381016.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5951895176908640647",
+      "alt": "🔎",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5951895176908640647.tgs",
+      "thumbnail_url": "./thumbs/5951895176908640647.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5965172192130895903",
+      "alt": "🌎",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5965172192130895903.tgs",
+      "thumbnail_url": "./thumbs/5965172192130895903.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5978936046191119920",
+      "alt": "😉",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5978936046191119920.tgs",
+      "thumbnail_url": "./thumbs/5978936046191119920.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5780694941516698050",
+      "alt": "🔋",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5780694941516698050.tgs",
+      "thumbnail_url": "./thumbs/5780694941516698050.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5785346296608988394",
+      "alt": "🤖",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5785346296608988394.tgs",
+      "thumbnail_url": "./thumbs/5785346296608988394.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5974297417086930398",
+      "alt": "🔨",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5974297417086930398.tgs",
+      "thumbnail_url": "./thumbs/5974297417086930398.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5895288332581082241",
+      "alt": "🆒",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5895288332581082241.tgs",
+      "thumbnail_url": "./thumbs/5895288332581082241.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5908997180995145237",
+      "alt": "💪",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5908997180995145237.tgs",
+      "thumbnail_url": "./thumbs/5908997180995145237.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5888476175147208243",
+      "alt": "🫵",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5888476175147208243.tgs",
+      "thumbnail_url": "./thumbs/5888476175147208243.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5915851493533028206",
+      "alt": "📂",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5915851493533028206.tgs",
+      "thumbnail_url": "./thumbs/5915851493533028206.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5938256692943787357",
+      "alt": "🤷‍♂️",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5938256692943787357.tgs",
+      "thumbnail_url": "./thumbs/5938256692943787357.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "6003705113997218704",
+      "alt": "🐽",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./6003705113997218704.tgs",
+      "thumbnail_url": "./thumbs/6003705113997218704.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5956553429718405176",
+      "alt": "👮‍♂️",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5956553429718405176.tgs",
+      "thumbnail_url": "./thumbs/5956553429718405176.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5956083298303217749",
+      "alt": "💤",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5956083298303217749.tgs",
+      "thumbnail_url": "./thumbs/5956083298303217749.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5866334493454897274",
+      "alt": "🕖",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5866334493454897274.tgs",
+      "thumbnail_url": "./thumbs/5866334493454897274.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5967780993921193106",
+      "alt": "🎂",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5967780993921193106.tgs",
+      "thumbnail_url": "./thumbs/5967780993921193106.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5967625138147954455",
+      "alt": "🎂",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5967625138147954455.tgs",
+      "thumbnail_url": "./thumbs/5967625138147954455.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "6019465380525773219",
+      "alt": "🥳",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./6019465380525773219.tgs",
+      "thumbnail_url": "./thumbs/6019465380525773219.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767399728518007986",
+      "alt": "✅",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767399728518007986.tgs",
+      "thumbnail_url": "./thumbs/5767399728518007986.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5994351766148222866",
+      "alt": "🚶‍♀️",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5994351766148222866.tgs",
+      "thumbnail_url": "./thumbs/5994351766148222866.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5764829255015861596",
+      "alt": "🗣",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5764829255015861596.tgs",
+      "thumbnail_url": "./thumbs/5764829255015861596.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5782720804575777027",
+      "alt": "👋",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5782720804575777027.tgs",
+      "thumbnail_url": "./thumbs/5782720804575777027.webp",
+      "pack": "DMJDuckXemoji"
+    },
+    {
+      "id": "5767374504175078683",
+      "alt": "🛒",
+      "category": "",
+      "is_animated": true,
+      "mime_type": "application/x-tgsticker",
+      "media_url": "./5767374504175078683.tgs",
+      "thumbnail_url": "./thumbs/5767374504175078683.webp",
+      "pack": "DMJDuckXemoji"
+    }
+  ]
+}
