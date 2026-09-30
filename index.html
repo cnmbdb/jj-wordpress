@@ -641,7 +641,7 @@ button[data-nav-id]:hover+div[id^="nav-panel-"],button[data-nav-id]:focus+div[id
     btn.addEventListener('click',function(){window.location.href=fallback;});
   });
 	})();</script><script id="jj-header-tools-and-i18n">(function(){
-  var authUrl='https://hfz.pw/user-sign-2-2?tab=signin&redirect_to=https%3A%2F%2Fhfz.pw%2Fhome';
+  var authUrl='https://hfz.pw/user-sign';
   var githubUrl='https://github.com/cnmbdb';
   var languages=[
     ['zh-CN','简体中文'],['en','English'],['zh-TW','繁體中文'],['ru','Русский'],['ja','日本語'],['ko','한국어'],['hi','हिन्दी']
@@ -689,7 +689,8 @@ button[data-nav-id]:hover+div[id^="nav-panel-"],button[data-nav-id]:focus+div[id
   function buildHeaderTools(){
     var wrap=document.querySelector('#marketing-header .ml-auto');
     if(!wrap)return;
-    wrap.innerHTML='<div class="jj-header-tools"><div class="jj-lang-wrap"><button class="jj-icon-btn jj-lang-toggle" type="button" aria-label="Language" aria-expanded="false">'+icon('globe')+'</button><div class="jj-lang-menu" role="menu">'+languages.map(function(l){return '<button type="button" role="menuitem" data-lang="'+l[0]+'">'+l[1]+'</button>';}).join('')+'</div></div><a class="jj-icon-btn" href="'+githubUrl+'" target="_top" aria-label="GitHub">'+icon('github')+'</a><a class="jj-login-btn" href="'+authUrl+'" target="_blank" rel="noopener">登录/注册</a></div>';
+    wrap.innerHTML='<div class="jj-header-tools"><div class="jj-lang-wrap"><button class="jj-icon-btn jj-lang-toggle" type="button" aria-label="Language" aria-expanded="false">'+icon('globe')+'</button><div class="jj-lang-menu" role="menu">'+languages.map(function(l){return '<button type="button" role="menuitem" data-lang="'+l[0]+'">'+l[1]+'</button>';}).join('')+'</div></div><a class="jj-icon-btn" href="'+githubUrl+'" target="_top" aria-label="GitHub">'+icon('github')+'</a><a class="jj-login-btn" href="'+authUrl+'" target="_top">登录/注册</a></div>';
+    wrap.querySelector('.jj-login-btn').addEventListener('click',navigateToLogin);
     var langWrap=wrap.querySelector('.jj-lang-wrap');
     var toggle=wrap.querySelector('.jj-lang-toggle');
     toggle.addEventListener('click',function(e){e.stopPropagation();var open=langWrap.classList.toggle('open');toggle.setAttribute('aria-expanded',open?'true':'false');});
@@ -710,11 +711,18 @@ button[data-nav-id]:hover+div[id^="nav-panel-"],button[data-nav-id]:focus+div[id
     if(!mobile)return;
     var actions=document.createElement('div');
     actions.className='jj-mobile-actions';
-    actions.innerHTML='<div class="jj-mobile-action-row"><a class="jj-mobile-login" href="'+authUrl+'" target="_blank" rel="noopener">登录/注册</a><button class="jj-mobile-lang-toggle" type="button" aria-label="切换语言" aria-expanded="false">'+icon('globe')+'</button></div><div class="jj-mobile-lang-panel" role="menu" aria-label="语言">'+languages.map(function(l){return '<button type="button" role="menuitem" data-lang="'+l[0]+'">'+l[1]+'</button>';}).join('')+'</div>';
+    actions.innerHTML='<div class="jj-mobile-action-row"><a class="jj-mobile-login" href="'+authUrl+'" target="_top">登录/注册</a><button class="jj-mobile-lang-toggle" type="button" aria-label="切换语言" aria-expanded="false">'+icon('globe')+'</button></div><div class="jj-mobile-lang-panel" role="menu" aria-label="语言">'+languages.map(function(l){return '<button type="button" role="menuitem" data-lang="'+l[0]+'">'+l[1]+'</button>';}).join('')+'</div>';
     mobile.insertBefore(actions,mobile.firstChild);
+    actions.querySelector('.jj-mobile-login').addEventListener('click',navigateToLogin);
     var toggle=actions.querySelector('.jj-mobile-lang-toggle');
     toggle.addEventListener('click',function(e){e.stopPropagation();var open=mobile.classList.toggle('jj-mobile-lang-open');toggle.setAttribute('aria-expanded',open?'true':'false');});
     actions.querySelectorAll('[data-lang]').forEach(function(btn){btn.addEventListener('click',function(e){e.stopPropagation();setLanguage(btn.getAttribute('data-lang'));mobile.classList.remove('jj-mobile-lang-open');toggle.setAttribute('aria-expanded','false');});});
+  }
+  function navigateToLogin(e){
+    e.preventDefault();
+    e.currentTarget.classList.add('is-navigating');
+    e.currentTarget.setAttribute('aria-busy','true');
+    window.top.location.assign(authUrl);
   }
   function captureOriginals(){walkText(function(node){if(!originals.has(node))originals.set(node,node.nodeValue);});}
   function setLanguage(lang){
@@ -737,4 +745,6 @@ button[data-nav-id]:hover+div[id^="nav-panel-"],button[data-nav-id]:focus+div[id
   setLanguage(localStorage.getItem('hfz-lang')||'zh-CN');
 })();</script><style id="jj-header-tools-style">
 .jj-header-tools{display:flex;align-items:center;gap:12px}.jj-icon-btn{width:38px;height:38px;border:0!important;border-radius:10px;color:#fff;background:transparent;box-shadow:none!important;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;transition:background .15s ease}.jj-icon-btn:hover{background:rgba(255,255,255,.08)}.jj-login-btn{height:38px;padding:0 18px;border-radius:10px;background:#fff;color:#000;font-size:14px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;white-space:nowrap}.jj-lang-wrap{position:relative}.jj-lang-menu{position:absolute;right:0;top:calc(100% + 10px);min-width:168px;padding:8px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:#050505;box-shadow:0 22px 60px rgba(0,0,0,.48);display:none;z-index:200}.jj-lang-wrap.open .jj-lang-menu{display:grid;gap:2px}.jj-lang-menu button{height:34px;padding:0 10px;border-radius:8px;color:rgba(255,255,255,.78);text-align:left;font-size:13px;background:transparent}.jj-lang-menu button:hover,.jj-lang-menu button.active{background:rgba(255,255,255,.09);color:#fff}@media(max-width:720px){.jj-header-tools{display:none}}
+.jj-login-btn:active,.jj-login-btn.is-navigating{background:#2386f8;color:#fff}
+#marketing-header .jj-mobile-login:active,#marketing-header .jj-mobile-login.is-navigating{background:#2386f8!important;color:#fff!important}
 </style></body></html>
