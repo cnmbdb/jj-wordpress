@@ -722,7 +722,7 @@ button[data-nav-id]:hover+div[id^="nav-panel-"],button[data-nav-id]:focus+div[id
     e.preventDefault();
     e.currentTarget.classList.add('is-navigating');
     e.currentTarget.setAttribute('aria-busy','true');
-    window.top.location.assign(authUrl);
+    window.top.location.href=authUrl;
   }
   function captureOriginals(){walkText(function(node){if(!originals.has(node))originals.set(node,node.nodeValue);});}
   function setLanguage(lang){
