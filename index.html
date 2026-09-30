@@ -689,11 +689,7 @@ button[data-nav-id]:hover+div[id^="nav-panel-"],button[data-nav-id]:focus+div[id
   function buildHeaderTools(){
     var wrap=document.querySelector('#marketing-header .ml-auto');
     if(!wrap)return;
-    wrap.innerHTML='<div class="jj-header-tools"><div class="jj-lang-wrap"><button class="jj-icon-btn jj-lang-toggle" type="button" aria-label="Language" aria-expanded="false">'+icon('globe')+'</button><div class="jj-lang-menu" role="menu">'+languages.map(function(l){return '<button type="button" role="menuitem" data-lang="'+l[0]+'">'+l[1]+'</button>';}).join('')+'</div></div><a class="jj-icon-btn" href="'+githubUrl+'" target="_top" aria-label="GitHub">'+icon('github')+'</a><a class="jj-login-btn" href="'+authUrl+'" target="_top">登录/注册</a></div>';
-    wrap.querySelector('.jj-login-btn').addEventListener('click',function(e){
-      e.preventDefault();
-      window.top.location.assign(authUrl);
-    });
+    wrap.innerHTML='<div class="jj-header-tools"><div class="jj-lang-wrap"><button class="jj-icon-btn jj-lang-toggle" type="button" aria-label="Language" aria-expanded="false">'+icon('globe')+'</button><div class="jj-lang-menu" role="menu">'+languages.map(function(l){return '<button type="button" role="menuitem" data-lang="'+l[0]+'">'+l[1]+'</button>';}).join('')+'</div></div><a class="jj-icon-btn" href="'+githubUrl+'" target="_top" aria-label="GitHub">'+icon('github')+'</a><a class="jj-login-btn" href="'+authUrl+'" target="_blank" rel="noopener">登录/注册</a></div>';
     var langWrap=wrap.querySelector('.jj-lang-wrap');
     var toggle=wrap.querySelector('.jj-lang-toggle');
     toggle.addEventListener('click',function(e){e.stopPropagation();var open=langWrap.classList.toggle('open');toggle.setAttribute('aria-expanded',open?'true':'false');});
@@ -714,9 +710,8 @@ button[data-nav-id]:hover+div[id^="nav-panel-"],button[data-nav-id]:focus+div[id
     if(!mobile)return;
     var actions=document.createElement('div');
     actions.className='jj-mobile-actions';
-    actions.innerHTML='<div class="jj-mobile-action-row"><a class="jj-mobile-login" href="'+authUrl+'" target="_top">登录/注册</a><button class="jj-mobile-lang-toggle" type="button" aria-label="切换语言" aria-expanded="false">'+icon('globe')+'</button></div><div class="jj-mobile-lang-panel" role="menu" aria-label="语言">'+languages.map(function(l){return '<button type="button" role="menuitem" data-lang="'+l[0]+'">'+l[1]+'</button>';}).join('')+'</div>';
+    actions.innerHTML='<div class="jj-mobile-action-row"><a class="jj-mobile-login" href="'+authUrl+'" target="_blank" rel="noopener">登录/注册</a><button class="jj-mobile-lang-toggle" type="button" aria-label="切换语言" aria-expanded="false">'+icon('globe')+'</button></div><div class="jj-mobile-lang-panel" role="menu" aria-label="语言">'+languages.map(function(l){return '<button type="button" role="menuitem" data-lang="'+l[0]+'">'+l[1]+'</button>';}).join('')+'</div>';
     mobile.insertBefore(actions,mobile.firstChild);
-    actions.querySelector('.jj-mobile-login').addEventListener('click',function(e){e.preventDefault();window.top.location.assign(authUrl);});
     var toggle=actions.querySelector('.jj-mobile-lang-toggle');
     toggle.addEventListener('click',function(e){e.stopPropagation();var open=mobile.classList.toggle('jj-mobile-lang-open');toggle.setAttribute('aria-expanded',open?'true':'false');});
     actions.querySelectorAll('[data-lang]').forEach(function(btn){btn.addEventListener('click',function(e){e.stopPropagation();setLanguage(btn.getAttribute('data-lang'));mobile.classList.remove('jj-mobile-lang-open');toggle.setAttribute('aria-expanded','false');});});
